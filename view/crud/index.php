@@ -33,7 +33,7 @@
   <div class="col-md-10 p-5 pt-2">
     <h3 ><i class="fas fa-user-graduate mr-2"></i> Data product</h3><hr>
         <a href="tambahproduk.php" class="btn btn-primary mb-2" data-togle="modal" data-target="#tambahproduk"> 
-        <i class="fas fa-plus-circle mr-2"></i>ADD PRODUCT DATA</a>
+        <i class="fas fa-plus-circle mr-2"></i>Add PRODUCT DATA</a>
       <table class="table table-striped table-bordered">
         <thead>
           <tr>
