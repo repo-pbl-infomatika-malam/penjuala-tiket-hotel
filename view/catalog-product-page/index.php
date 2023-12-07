@@ -5,14 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Hotel Room Catalog</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <style>
-        .card-img-top {
-            height: 200px; 
-            object-fit: cover; 
-        }
-    </style>
+    <link rel="stylesheet" href="style.css"> 
 </head>
 <body>
+
+<!-- Banner Section -->
+<div class="banner">
+    <h1>Welcome to Our Hotel Room Catalog</h1>
+    <p>Discover our luxurious rooms and book your stay today!</p>
+</div>
 
 <div class="container mt-5">
     <h1 class="mb-4">Hotel Room Catalog</h1>
@@ -31,14 +32,13 @@
                         <li class="list-group-item">Type: Standard</li>
                         <li class="list-group-item">Price: $100/night</li>
                     </ul>
-                    <a href="#" class="btn btn-primary mt-2">Book Now</a>
+                    <a href="#" class="btn btn-primary mt-2 btn-book-now">Book Now</a>
                 </div>
                 <div class="card-footer">
                     <small class="text-muted"><a href="#">See Details</a></small>
                 </div>
             </div>
         </div>
-
         <!-- Room 2 -->
         <div class="col">
             <div class="card h-100">
@@ -52,7 +52,7 @@
                         <li class="list-group-item">Type: Deluxe</li>
                         <li class="list-group-item">Price: $150/night</li>
                     </ul>
-                    <a href="#" class="btn btn-primary mt-2">Book Now</a>
+                    <a href="#" class="btn btn-primary mt-2 btn-book-now">Book Now</a>
                 </div>
                 <div class="card-footer">
                     <small class="text-muted"><a href="#">See Details</a></small>
@@ -69,11 +69,11 @@
                     <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum excepturi, sint officia omnis quis at odit esse eaque non quo est tempora saepe dolorum provident placeat labore fuga nisi a.</p>
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item">ID: 003</li>
-                        <li class="list-group-item">Room Number: 201</li>
-                        <li class="list-group-item">Type: Deluxe</li>
+                        <li class="list-group-item">Room Number: 160</li>
+                        <li class="list-group-item">Type: Standard</li>
                         <li class="list-group-item">Price: $150/night</li>
                     </ul>
-                    <a href="#" class="btn btn-primary mt-2">Book Now</a>
+                    <a href="#" class="btn btn-primary mt-2 btn-book-now">Book Now</a>
                 </div>
                 <div class="card-footer">
                     <small class="text-muted"><a href="#">See Details</a></small>
@@ -90,11 +90,11 @@
                     <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum excepturi, sint officia omnis quis at odit esse eaque non quo est tempora saepe dolorum provident placeat labore fuga nisi a.</p>
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item">ID: 004</li>
-                        <li class="list-group-item">Room Number: 201</li>
+                        <li class="list-group-item">Room Number: 122</li>
                         <li class="list-group-item">Type: Deluxe</li>
                         <li class="list-group-item">Price: $150/night</li>
                     </ul>
-                    <a href="#" class="btn btn-primary mt-2">Book Now</a>
+                    <a href="#" class="btn btn-primary mt-2 btn-book-now">Book Now</a>
                 </div>
                 <div class="card-footer">
                     <small class="text-muted"><a href="#">See Details</a></small>
@@ -111,11 +111,11 @@
                     <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum excepturi, sint officia omnis quis at odit esse eaque non quo est tempora saepe dolorum provident placeat labore fuga nisi a.</p>
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item">ID: 005</li>
-                        <li class="list-group-item">Room Number: 201</li>
-                        <li class="list-group-item">Type: Deluxe</li>
+                        <li class="list-group-item">Room Number: 185</li>
+                        <li class="list-group-item">Type: Standard</li>
                         <li class="list-group-item">Price: $150/night</li>
                     </ul>
-                    <a href="#" class="btn btn-primary mt-2">Book Now</a>
+                    <a href="#" class="btn btn-primary mt-2 btn-book-now">Book Now</a>
                 </div>
                 <div class="card-footer">
                     <small class="text-muted"><a href="#">See Details</a></small>
@@ -132,11 +132,11 @@
                     <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum excepturi, sint officia omnis quis at odit esse eaque non quo est tempora saepe dolorum provident placeat labore fuga nisi a.</p>
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item">ID: 006</li>
-                        <li class="list-group-item">Room Number: 201</li>
+                        <li class="list-group-item">Room Number: 147</li>
                         <li class="list-group-item">Type: Deluxe</li>
                         <li class="list-group-item">Price: $150/night</li>
                     </ul>
-                    <a href="#" class="btn btn-primary mt-2">Book Now</a>
+                    <a href="#" class="btn btn-primary mt-2 btn-book-now">Book Now</a>
                 </div>
                 <div class="card-footer">
                     <small class="text-muted"><a href="#">See Details</a></small>
