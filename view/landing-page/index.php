@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<?php
+require '../../config.php';
+require '../../controller/getData.php';
+$dataHotels = getData($conn, "SELECT * FROM rooms");
+
+?>
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport"
@@ -125,23 +132,31 @@
 
     <div class="d-flex flex-wrap justify-content-center gap-lg-5 mt-lg-4"
       style="padding-top: 40px;">
-      <?php for ($x = 0; $x <= 5; $x++) : ?>
+
+      <?php $i = 1; ?>
+      <?php foreach ($dataHotels as $dataHotel): ?>
+      <?php 
+
+      if ($i>=2){
+        return false;
+        echo 'stop';
+      }; ?>
       <div class="card-rooms">
         <img src="../../assets/landing-page/banner-hotel.jpg"
           class="card-img-top"
           alt="...">
 
         <div class="card-rooms-content">
-          <p class="number-rooms">Number Room : 0<?php echo $x+1 ?></p>
-          <p class="title-rooms">Card title</h>
-          <p class="desc-rooms">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse architecto tempora quas
-            commodi dolorem itaque, dolores sequi repudiandae odit adipisci.
+          <p class="number-rooms"><?php echo $dataHotel['room_number'] ?></p>
+          <p class="title-rooms"><?php echo $dataHotel['room_name'] ?></h>
+          <p class="desc-rooms"><?php echo $dataHotel['description'] ?>
           </p>
         </div>
 
         <button class="button-primary">See Details</button>
       </div>
-      <?php endfor; ?>
+      <?php $i++; ?>
+      <?php endforeach; ?>
     </div>
   </div>
 
