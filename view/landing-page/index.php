@@ -56,7 +56,7 @@ $dataHotels = getData($conn, "SELECT * FROM rooms");
 
   <div class="banner-container">
     <img class="banner-hotel"
-      src="../../assets/landing-page/banner-hotel.jpg"
+      src="../../assets/images/landing-page/banner-hotel.jpg"
       alt="">
     <div class="title-banner">
       <h1>WELCOME</h1>
@@ -101,7 +101,7 @@ $dataHotels = getData($conn, "SELECT * FROM rooms");
 
   <div class="container-lg about-us-container">
     <div class="right-content">
-      <img src="../../assets/landing-page/banner-about-us.jpg"
+      <img src="../../assets/images/landing-page/banner-about-us.jpg"
         class="about-banner" />
     </div>
     <div class="left-content">
@@ -142,7 +142,7 @@ $dataHotels = getData($conn, "SELECT * FROM rooms");
         echo 'stop';
       }; ?>
       <div class="card-rooms">
-        <img src="../../assets/landing-page/banner-hotel.jpg"
+        <img src="../../assets/images/landing-page/banner-hotel.jpg"
           class="card-img-top"
           alt="...">
 
@@ -195,7 +195,7 @@ $dataHotels = getData($conn, "SELECT * FROM rooms");
     </div>
 
     <div class="right-content">
-      <img src="../../assets/landing-page/wallpaper-hotel.jpg"
+      <img src="../../assets/images/landing-page/wallpaper-hotel.jpg"
         class="image-content-tag-line" />
     </div>
   </div>
@@ -216,7 +216,7 @@ $dataHotels = getData($conn, "SELECT * FROM rooms");
 
     </div>
     <div class="right-content">
-      <img src="../../assets/landing-page/advantage-hotel.jpg"
+      <img src="../../assets/images/landing-page/advantage-hotel.jpg"
         class="advantage-banner" />
     </div>
   </div>
