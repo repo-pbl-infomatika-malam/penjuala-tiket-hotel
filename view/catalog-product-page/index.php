@@ -32,30 +32,31 @@
                         <li class="list-group-item">Type: Standard</li>
                         <li class="list-group-item">Price: $100/night</li>
                     </ul>
-                    <a href="#" class="btn btn-primary mt-2 btn-book-now">Book Now</a>
-                </div>
-                <div class="card-footer">
-                    <small class="text-muted"><a href="#">See Details</a></small>
+                    <div class="mt-3 d-flex justify-content-between">
+                    <button type="button" class="btn button-secondary">See Details</button>
+                    <button type="button" class="btn button-primary me-2">Book now</button>
+                    </div>
                 </div>
             </div>
         </div>
+
         <!-- Room 2 -->
         <div class="col">
             <div class="card h-100">
-                <img src="https://media.cnn.com/api/v1/images/stellar/prod/140127103345-peninsula-shanghai-deluxe-mock-up.jpg?q=w_2226,h_1449,x_0,y_0,c_fill" class="card-img-top" alt="Room 2">
+                <img src="https://media.cnn.com/api/v1/images/stellar/prod/140127103345-peninsula-shanghai-deluxe-mock-up.jpg?q=w_2226,h_1449,x_0,y_0,c_fill" class="card-img-top" alt="Room 1">
                 <div class="card-body">
                     <h5 class="card-title">Room 2</h5>
                     <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum excepturi, sint officia omnis quis at odit esse eaque non quo est tempora saepe dolorum provident placeat labore fuga nisi a.</p>
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item">ID: 002</li>
-                        <li class="list-group-item">Room Number: 201</li>
+                        <li class="list-group-item">Room Number: 102</li>
                         <li class="list-group-item">Type: Deluxe</li>
                         <li class="list-group-item">Price: $150/night</li>
                     </ul>
-                    <a href="#" class="btn btn-primary mt-2 btn-book-now">Book Now</a>
-                </div>
-                <div class="card-footer">
-                    <small class="text-muted"><a href="#">See Details</a></small>
+                    <div class="mt-3 d-flex justify-content-between">
+                    <button type="button" class="btn button-secondary">See Details</button>
+                    <button type="button" class="btn button-primary me-2">Book now</button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -63,20 +64,20 @@
         <!-- Room 3 -->
         <div class="col">
             <div class="card h-100">
-                <img src="https://assets-global.website-files.com/5c6d6c45eaa55f57c6367749/65045f093c166fdddb4a94a5_x-65045f0266217.webp" class="card-img-top" alt="Room 3">
+                <img src="https://www.acaciahotelsmanila.com/wp-content/uploads/2023/05/Rooms-and-Suites-AHM-1.jpg" class="card-img-top" alt="Room 1">
                 <div class="card-body">
-                    <h5 class="card-title">Room 2</h5>
+                    <h5 class="card-title">Room 3</h5>
                     <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum excepturi, sint officia omnis quis at odit esse eaque non quo est tempora saepe dolorum provident placeat labore fuga nisi a.</p>
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item">ID: 003</li>
-                        <li class="list-group-item">Room Number: 160</li>
+                        <li class="list-group-item">Room Number: 103</li>
                         <li class="list-group-item">Type: Standard</li>
-                        <li class="list-group-item">Price: $150/night</li>
+                        <li class="list-group-item">Price: $100/night</li>
                     </ul>
-                    <a href="#" class="btn btn-primary mt-2 btn-book-now">Book Now</a>
-                </div>
-                <div class="card-footer">
-                    <small class="text-muted"><a href="#">See Details</a></small>
+                    <div class="mt-3 d-flex justify-content-between">
+                    <button type="button" class="btn button-secondary">See Details</button>
+                    <button type="button" class="btn button-primary me-2">Book now</button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -84,20 +85,20 @@
         <!-- Room 4 -->
         <div class="col">
             <div class="card h-100">
-                <img src="https://i0.wp.com/theluxurytravelexpert.com/wp-content/uploads/2014/03/trump-hotel-chicago-illinois-usa.jpg" class="card-img-top" alt="Room 4">
+                <img src="https://www.europahotelbelfast.com/wp-content/uploads/2021/10/DSC_7769-Edit-1-1366x768-fp_mm-fpoff_0_0.png" class="card-img-top" alt="Room 1">
                 <div class="card-body">
-                    <h5 class="card-title">Room 2</h5>
+                    <h5 class="card-title">Room 4</h5>
                     <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum excepturi, sint officia omnis quis at odit esse eaque non quo est tempora saepe dolorum provident placeat labore fuga nisi a.</p>
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item">ID: 004</li>
-                        <li class="list-group-item">Room Number: 122</li>
+                        <li class="list-group-item">Room Number: 104</li>
                         <li class="list-group-item">Type: Deluxe</li>
                         <li class="list-group-item">Price: $150/night</li>
                     </ul>
-                    <a href="#" class="btn btn-primary mt-2 btn-book-now">Book Now</a>
-                </div>
-                <div class="card-footer">
-                    <small class="text-muted"><a href="#">See Details</a></small>
+                    <div class="mt-3 d-flex justify-content-between">
+                    <button type="button" class="btn button-secondary">See Details</button>
+                    <button type="button" class="btn button-primary me-2">Book now</button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -105,20 +106,20 @@
         <!-- Room 5 -->
         <div class="col">
             <div class="card h-100">
-                <img src="https://image-tc.galaxy.tf/wijpeg-7rgnfsntskc4u9fsygs551gz/hero-presidential-suite_wide.jpg?crop=89%2C0%2C1422%2C800&width=800" class="card-img-top" alt="Room 5">
+                <img src="https://www.seleqtionshotels.com/content/dam/seleqtions/Connaugth/TCPD_PremiumBedroom4_1235.jpg/jcr:content/renditions/cq5dam.web.1280.1280.jpeg" class="card-img-top" alt="Room 1">
                 <div class="card-body">
-                    <h5 class="card-title">Room 2</h5>
+                    <h5 class="card-title">Room 5</h5>
                     <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum excepturi, sint officia omnis quis at odit esse eaque non quo est tempora saepe dolorum provident placeat labore fuga nisi a.</p>
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item">ID: 005</li>
-                        <li class="list-group-item">Room Number: 185</li>
+                        <li class="list-group-item">Room Number: 105</li>
                         <li class="list-group-item">Type: Standard</li>
-                        <li class="list-group-item">Price: $150/night</li>
+                        <li class="list-group-item">Price: $100/night</li>
                     </ul>
-                    <a href="#" class="btn btn-primary mt-2 btn-book-now">Book Now</a>
-                </div>
-                <div class="card-footer">
-                    <small class="text-muted"><a href="#">See Details</a></small>
+                    <div class="mt-3 d-flex justify-content-between">
+                    <button type="button" class="btn button-secondary">See Details</button>
+                    <button type="button" class="btn button-primary me-2">Book now</button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -126,23 +127,24 @@
         <!-- Room 6 -->
         <div class="col">
             <div class="card h-100">
-                <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/29/aa/71/78/adjoining-rooms.jpg?w=1200&h=-1&s=1&cx=1210&cy=934&chk=v1_3234c27ecc0a72be8242" class="card-img-top" alt="Room 6">
+                <img src="https://www.bestwesternplusmeridian.com/Content/images/Queen-Room.jpg" class="card-img-top" alt="Room 1">
                 <div class="card-body">
-                    <h5 class="card-title">Room 2</h5>
+                    <h5 class="card-title">Room 6</h5>
                     <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum excepturi, sint officia omnis quis at odit esse eaque non quo est tempora saepe dolorum provident placeat labore fuga nisi a.</p>
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item">ID: 006</li>
-                        <li class="list-group-item">Room Number: 147</li>
+                        <li class="list-group-item">Room Number: 106</li>
                         <li class="list-group-item">Type: Deluxe</li>
                         <li class="list-group-item">Price: $150/night</li>
                     </ul>
-                    <a href="#" class="btn btn-primary mt-2 btn-book-now">Book Now</a>
-                </div>
-                <div class="card-footer">
-                    <small class="text-muted"><a href="#">See Details</a></small>
+                    <div class="mt-3 d-flex justify-content-between">
+                    <button type="button" class="btn button-secondary">See Details</button>
+                    <button type="button" class="btn button-primary me-2">Book now</button>
+                    </div>
                 </div>
             </div>
         </div>
+
 
 
     </div>
