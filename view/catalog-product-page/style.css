@@ -1,0 +1,42 @@
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+
+.banner {
+  background-image: url("../../assets/images/catalog-product/banner.jpg");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+  padding: 100px 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  margin-bottom: 20px;
+}
+
+.card-body {
+  height: 100%;
+  flex-direction: column;
+}
+
+.card-text {
+  flex-grow: 1;
+}
+
+.button-primary {
+  text-decoration: none;
+  color: #fff;
+  border: solid #e09145 1px;
+  border-radius: 8px;
+  background-color: #e09145;
+  padding: 8px 10px;
+}
+
+.button-secondary {
+  text-decoration: none;
+  color: #e09145;
+  border: solid #fff 1px;
+  border-radius: 8px;
+  background-color: white;
+  padding: 8px 10px;
+}
