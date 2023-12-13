@@ -1,161 +1,231 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<?php
+require '../../config.php';
+require '../../controller/getData.php';
+$dataHotels = getData($conn, "SELECT * FROM rooms");
+
+
+?>
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport"
     content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon"
+    href="../../assets/favicon.ico">
   <title>Tiket AjA</title>
+  <link rel="stylesheet"
+    type="text/css"
+    href="../../assets/fontawesome/css/all.min.css">
   <link href="../../assets/css/bootstrap.min.css"
     rel="stylesheet">
-  <link href="styles.css"
+  <link href="_landing-page.css"
+    rel="stylesheet" />
+  <link href="../../styles/global.css"
     rel="stylesheet" />
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg bg-success fixed-top">
-    <div class="container-lg">
-      <a class="navbar-brand text-light fs-4 fw-semibold"
-        href="../index.php">Tiket Ajah</a>
 
-      <div id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a href="../login"
-              class="btn btn-outline-light"
-              type="submit">Login</a>
-          </li>
-          <li class="nav-item ms-2">
-            <a href="../register "
-              class="btn btn-outline-light"
-              type="submit">Register</a>
-          </li>
-        </ul>
+  <!-- navbar start -->
+  <nav class="container-navbar">
+    <div class="navbar-content container-lg">
+      <a href="">
+        <img src="../../assets/logo-pbl.png"
+          class="logo"
+          alt="" />
+      </a>
+
+      <div class="d-flex align-items-center gap-2">
+        <div>
+          <a href="#about-us"
+            class="text-button-primary">About Us</a>
+          <a href="../catalog-product-page/"
+            class="text-button-primary">Catalog</a>
+        </div>
+
+        <div class="divider"></div>
+
+        <a href="../login/">
+          <button class="button-primary">Sign In</button>
+        </a>
+        <a class="button-secondary">Sign Up</a>
       </div>
     </div>
   </nav>
+  <!-- navbar end -->
 
-  <div class="container-lg">
-    <div class="slider">
-      <span class="imgtext">
-        <!-- <p id="wel">Selamat Datang Di</p> -->
-        <h1 id="h1">Selamat Datang...</h1>
-        <p id="loremp">Lorem ipsum dolor sit amet, no mollis regione accusamus qui. Legere voluptua mei an, possim
-          aliquid
-          utroque.</p>
-        <input type="button"
-          class="btn btn-light"
-          value="Check Tiket">
-      </span>
-      <img
-        src="https://cdn0-production-images-kly.akamaized.net/oSgflu88GES_yPHxHhW2S6owtCE=/800x450/smart/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/3386715/original/094552600_1614241094-Double_Tree_Jakarta.jpg"
-        class="imag">
+  <div class="banner-container">
+    <img class="banner-hotel"
+      src="../../assets/images/landing-page/banner-hotel.jpg"
+      alt="">
+    <div class="title-banner">
+      <h1>WELCOME</h1>
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa, quas.</p>
     </div>
 
-    <div class="banner">
-      <span class="bspan border border-3 border-dark-subtle"><i class="fas fa-utensils"></i>Best Service</span>
-      <span class="bspan border border-3 border-dark-subtle"><i class="fas fa-concierge-bell"></i>Quality Food</span>
-      <span class="bspan border border-3 border-dark-subtle"><i class="fas fa-wifi"></i>Perfect Cooked</span>
-    </div>
 
-    <div class="bg-dark-subtle p-5">
-      <div class="check">
-        <div class="checklb">
-          <lable>Check In</lable>
-          <input type="date"
-            name=""
-            value="check-in"
-            class="checkinp"
-            id="">
-        </div>
-        <div class="checklb">
-          <lable>Check Out</lable>
-          <input type="date"
-            name=""
-            value="check-out"
-            class="checkinp"
-            id="">
-        </div>
-        <div class="checklb">
-          <lable class="checklb">Rooms</lable>
-          <select class="secroom"
-            name="rooms"
-            id="rooms">
-            <option class="optroom"
-              value="royal room">Royal Room</option>
-            <option class="optroom"
-              value="delux room">Delux Room</option>
-            <option class="optroom"
-              value="double room">Double Room</option>
-            <option class="optroom"
-              value="single room">Single Room</option>
-          </select>
-        </div>
+    <div class="box-detail">
+      <div>
+        <p class="title-count">
+          Book Your
+        </p>
+        <p class="result-count">
+          Room
+        </p>
       </div>
-      <div class="d-flex align-items-center justify-content-center">
-        <button class="btn btn-light ">search</button>
+      <div class="d-flex flex-column text-center">
+        <p class="title-count">
+          CHECK-IN
+        </p>
+        <p class="result-count">
+          10
+        </p>
+      </div>
+      <div class="d-flex flex-column text-center">
+        <p class="title-count">
+          CHECK-OUT
+        </p>
+        <p class="result-count">
+          7
+        </p>
+      </div>
+      <div class="d-flex flex-column text-center">
+        <p class="title-count">
+          GUESTS
+        </p>
+        <p class="result-count">
+          5
+        </p>
       </div>
     </div>
+  </div>
 
-    <div class="rooms">
-      <h1>Hotel Tersedia</h1>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, reprehenderit!</p>
-      <div class="roomimages">
-        <?php for ($x = 0; $x <= 5; $x++) : ?>
-        <span class="innerimg">
-          <img src="https://picsum.photos/300"
-            class="img2">
-          <p class="h11">Ini Hotel</p>
-          <p class="pricetag">Rp.100.000</p>
-        </span>
-        <?php endfor; ?>
+  <div id="about-us"></div>
+
+  <div class="container-lg about-us-container">
+    <div class="right-content">
+      <img src="../../assets/images/landing-page/banner-about-us.jpg"
+        class="about-banner" />
+    </div>
+    <div class="left-content">
+      <div>
+        <p class="head-title-about-us">GET TO KNOW</p>
+        <p class="title-about-us">About Us</p>
+      </div>
+      <p class="desc-about-us">Welcome, a harmonious blend of opulence and warmth, where each stay is a unique story
+        waiting to unfold. Nestled in the heart of Batam, our hotel embodies the epitome of luxury and personalized
+        service</p>
+
+      <p class="desc-about-us">&emsp;Indulge in the embrace of meticulously designed rooms and suites, each a haven of
+        comfort
+        adorned with modern amenities and stylish decor. Whether you're here for business or leisure, our commitment to
+        excellence ensures a seamless and memorable experience.</p>
+
+      <button class="button-secondary">Contact-Us</button>
+    </div>
+  </div>
+
+  <div class="container-lg out-rooms-container">
+    <div class="headline">
+      <p class="content-headline">AVAILABLE ACCOMMODATIONS</p>
+      <h1 class="headline-title">OUR ROOMS</h1>
+    </div>
+
+    <div class="d-flex flex-wrap justify-content-center gap-lg-5 mt-lg-4"
+      style="padding-top: 40px;">
+
+      <?php $i = 1; ?>
+      <?php foreach ($dataHotels as $dataHotel): ?>
+      <div class="card-rooms">
+        <img src="../../assets/images/landing-page/banner-hotel.jpg"
+          class="card-img-top"
+          alt="...">
+
+        <div class="card-rooms-content">
+          <p class="number-rooms"><?php echo $dataHotel['room_number'] ?></p>
+          <p class="title-rooms"><?php echo $dataHotel['room_name'] ?></h>
+          <p class="desc-rooms"><?php echo $dataHotel['description'] ?>
+          </p>
+        </div>
+
+        <button class="button-primary">See Details</button>
+      </div>
+      <?php $i++; ?>
+      <?php endforeach; ?>
+    </div>
+  </div>
+
+  <div style="background-color: #9e9e9e1c;">
+    <div class="container-lg services-container">
+      <div class="headline">
+        <p class="content-headline">WILL GIVE YOU GOOD QUALITY</p>
+        <h1 class="headline-title">SERVICES</h1>
+      </div>
+
+      <div class="d-flex justify-content-center gap-lg-5 mt-lg-4">
+        <div class="card"
+          style="width: 16rem;aspect-ratio: 1;">
+
+        </div>
+        <div class="card"
+          style="width: 16rem;aspect-ratio: 1;">
+        </div>
+        <div class="card"
+          style="width: 16rem;aspect-ratio: 1;">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-lg tag-line-container">
+    <div class="left-content">
+      <div class="d-flex  flex-column gap-2 text-center">
+        <p class="title-tag-line">Seamless Luxury</p>
+        <h1 class="title-tag-line">Unforgettable Stay Elevate Your Experience</h1>
+
+        <p class="desc-tag-line">Embark on a Journey of Refined Tranquility: Unwind in Unmatched Sophistication and
+          Impeccable Comfort</p>
       </div>
     </div>
 
-  </div>
-
-  <div class="room-deal">
-    <img
-      src="https://raw.githubusercontent.com/koushil-mankali/single-page-hotel-site-front-end/master/images/room-deal.jpg"
-      id="imgdeal">
-  </div>
-
-
-  <div class="about container-lg">
-    <img
-      src="https://raw.githubusercontent.com/koushil-mankali/single-page-hotel-site-front-end/master/images/about-us-2.jpg">
-    <div class='about-p'>
-      <h1>Tentang Hotel</h1>
-      <p>Kevin pastrami tri-tip prosciutto ham hock pork belly bacon pork loin salami pork chop shank corned beef
-        tenderloin meatball cow. Pork bresaola meatloaf tongue, landjaeger tail andouille strip steak tenderloin
-        sausage
-        chicken tri-tip. Incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p>
-      <ol>
-        <li>Pork bresaola meatloaf tongue, landjaeger tail andouille.</li>
-        <li>Pork bresaola meatloaf tongue, landjaeger tail andouille.</li>
-        <li>Pork bresaola meatloaf tongue, landjaeger tail andouille.</li>
-        <li>Pork bresaola meatloaf tongue, landjaeger tail andouille.</li>
-        <li>Pork bresaola meatloaf tongue, landjaeger tail andouille.</li>
-      </ol>
+    <div class="right-content">
+      <img src="../../assets/images/landing-page/wallpaper-hotel.jpg"
+        class="image-content-tag-line" />
     </div>
+  </div>
 
-    <div class="clirev">
-      <span class="espan"><i class="fspan fa-4x far fa-smile-beam"></i>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, soluta.</p>
-      </span>
-      <span class="espan"><i class="fspan fa-4x far fa-heart"></i>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, soluta.</p>
-      </span>
-      <span class="espan"><i class="fspan fa-4x far fa-thumbs-up"></i>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, soluta.</p>
-      </span>
-      <span class="espan"><i class="fspan fa-4x far fa-star"></i>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, soluta.</p>
-      </span>
+  <div class="container-lg about-us-container">
+    <div class="left-content">
+      <div>
+        <p class="title-about-us">Advantage</p>
+        <p class="head-title-about-us">WHAT YOU GET</p>
+      </div>
+      <p class="desc-about-us">&emsp;Strategically nestled in the heart of Batam, our hotel provides easy access to key
+        attractions, business districts, and cultural landmarks, ensuring that you are at the center of it all.</p>
+
+      <p class="desc-about-us">&emsp;Indulge in the embrace of meticulously designed rooms and suites, each a haven of
+        comfort
+        adorned with modern amenities and stylish decor. Whether you're here for business or leisure, our commitment to
+        excellence ensures a seamless and memorable experience.</p>
+
     </div>
+    <div class="right-content">
+      <img src="../../assets/images/landing-page/advantage-hotel.jpg"
+        class="advantage-banner" />
+    </div>
+  </div>
 
-  </div>
-  </div>
+  <!-- footer start -->
+  <footer class=" border-top">
+    <div class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 container-lg">
+      <p class="col-md-4 mb-0 text-body-secondary">&copy; 2023 PBL-IF-D-MALAM, Mhs</p>
+    </div>
+  </footer>
+  <!-- footer end -->
+
 </body>
 
 </html>
