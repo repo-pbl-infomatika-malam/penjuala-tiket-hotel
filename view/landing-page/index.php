@@ -6,6 +6,7 @@ require '../../config.php';
 require '../../controller/getData.php';
 $dataHotels = getData($conn, "SELECT * FROM rooms");
 
+
 ?>
 
 <head>
@@ -20,31 +21,32 @@ $dataHotels = getData($conn, "SELECT * FROM rooms");
     href="../../assets/fontawesome/css/all.min.css">
   <link href="../../assets/css/bootstrap.min.css"
     rel="stylesheet">
-  <link href="styles.css"
+  <link href="_landing-page.css"
+    rel="stylesheet" />
+  <link href="../../styles/global.css"
     rel="stylesheet" />
 </head>
 
 <body>
+
+  <!-- navbar start -->
   <nav class="container-navbar">
     <div class="navbar-content container-lg">
-      <img src="../../assets/logo-pbl.png"
-        class="logo"
-        alt="" />
+      <a href="">
+        <img src="../../assets/logo-pbl.png"
+          class="logo"
+          alt="" />
+      </a>
 
-      <div class="d-flex align-items-center gap-3">
+      <div class="d-flex align-items-center gap-2">
+        <div>
+          <a href="#about-us"
+            class="text-button-primary">About Us</a>
+          <a href="../catalog-product-page/"
+            class="text-button-primary">Catalog</a>
+        </div>
 
-        <a href="#"
-          class="text-button-primary">About</a>
-        <a href="#"
-          class="text-button-primary">Catalog</a>
-        <a href="#"
-          class="text-button-primary">Contact Us</a>
-      </div>
-
-
-      <div class="d-flex align-items-center gap-3">
-
-        <!-- <div class="divider"></div> -->
+        <div class="divider"></div>
 
         <a href="../login/">
           <button class="button-primary">Sign In</button>
@@ -53,6 +55,7 @@ $dataHotels = getData($conn, "SELECT * FROM rooms");
       </div>
     </div>
   </nav>
+  <!-- navbar end -->
 
   <div class="banner-container">
     <img class="banner-hotel"
@@ -62,6 +65,7 @@ $dataHotels = getData($conn, "SELECT * FROM rooms");
       <h1>WELCOME</h1>
       <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa, quas.</p>
     </div>
+
 
     <div class="box-detail">
       <div>
@@ -99,6 +103,8 @@ $dataHotels = getData($conn, "SELECT * FROM rooms");
     </div>
   </div>
 
+  <div id="about-us"></div>
+
   <div class="container-lg about-us-container">
     <div class="right-content">
       <img src="../../assets/images/landing-page/banner-about-us.jpg"
@@ -120,11 +126,9 @@ $dataHotels = getData($conn, "SELECT * FROM rooms");
 
       <button class="button-secondary">Contact-Us</button>
     </div>
-
   </div>
 
   <div class="container-lg out-rooms-container">
-
     <div class="headline">
       <p class="content-headline">AVAILABLE ACCOMMODATIONS</p>
       <h1 class="headline-title">OUR ROOMS</h1>
@@ -135,12 +139,6 @@ $dataHotels = getData($conn, "SELECT * FROM rooms");
 
       <?php $i = 1; ?>
       <?php foreach ($dataHotels as $dataHotel): ?>
-      <?php 
-
-      if ($i>=2){
-        return false;
-        echo 'stop';
-      }; ?>
       <div class="card-rooms">
         <img src="../../assets/images/landing-page/banner-hotel.jpg"
           class="card-img-top"
@@ -182,7 +180,6 @@ $dataHotels = getData($conn, "SELECT * FROM rooms");
     </div>
   </div>
 
-
   <div class="container-lg tag-line-container">
     <div class="left-content">
       <div class="d-flex  flex-column gap-2 text-center">
@@ -221,11 +218,13 @@ $dataHotels = getData($conn, "SELECT * FROM rooms");
     </div>
   </div>
 
+  <!-- footer start -->
   <footer class=" border-top">
     <div class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 container-lg">
       <p class="col-md-4 mb-0 text-body-secondary">&copy; 2023 PBL-IF-D-MALAM, Mhs</p>
     </div>
   </footer>
+  <!-- footer end -->
 
 </body>
 
