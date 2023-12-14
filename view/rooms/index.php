@@ -6,21 +6,45 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Penjualan tiket hotel</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link href="../../assets/css/bootstrap.min.css"
+    rel="stylesheet">
+  <link rel="stylesheet"
+    href="style.css">
+  <link rel="stylesheet"
+    href="../../styles/global.css">
 </head>
 
 <body>
-  <div class="container">
-    <div class="card">
-      <div class="card-header bg-primary text-white">
-        Data Product
+  <!-- navbar start -->
+  <nav class="container-navbar">
+    <div class="navbar-content container-lg">
+      <a href="../landing-page/">
+        <img src="../../assets/logo-pbl.png"
+          class="logo"
+          alt="" />
+      </a>
+
+      <div class="d-flex align-items-center gap-2">
+        <div>
+          <a href="../catalog-product-page/"
+            class="text-button-primary">Create Ticket</a>
+        </div>
+
+        <div class="divider"></div>
+
+        
       </div>
-      <div class="card-body">
+    </div>
+  </nav>
+  <!-- navbar end -->
+
 
         <!-- Button trigger modal -->
+        <div class="mt-5">
         <button type="button" class="btn btn-success mb-3 " data-bs-toggle="modal" data-bs-target="#modaltambah">
           ADD PRODUCT
         </button>
+        </div>
 
         <table class="table table-bordered table-striped table-hover">
           <tr>
