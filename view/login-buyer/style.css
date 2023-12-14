@@ -7,16 +7,15 @@
  
 body {
     width: 100%;
-    min-height: 80vh;
-    background-image: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url(image/bg2.jpg);
+    min-height: 100vh;
+    background-image: linear-gradient( 102.4deg, #E09145  7.8%,  #a57243 100.3% );
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-
     background-position: center;
     background-size: cover;
-    display: flex;
+    display: flex;      
     justify-content: center;
     align-items: center;
 }
@@ -35,7 +34,7 @@ body {
     font-weight: 500;
     font-size: 1.1rem;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     display: block;
     text-transform: capitalize;
 }
@@ -49,17 +48,17 @@ body {
 .container .login-email .input-group input {
     width: 100%;
     height: 100%;
-    border: 2px solid #e7e7e7;
+    border: 2px solid #E09145;
     padding: 15px 20px;
     font-size: 1rem;
-    border-radius: 30px;
+    border-radius: 10px;
     background: transparent;
     outline: none;
     transition: .3s;
 }
  
 .container .login-email .input-group input:focus, .container .login-email .input-group input:valid {
-    border-color: #a29bfe;
+    border-color: #E09145;
 }
  
 .container .login-email .input-group .btn {
@@ -68,20 +67,15 @@ body {
     padding: 15px 20px;
     text-align: center;
     border: none;
-    background: #a29bfe;
+    background: #E09145;
     outline: none;
-    border-radius: 30px;
+    border-radius: 10px;
     font-size: 1.2rem;
     color: #FFF;
     cursor: pointer;
     transition: .3s;
 }
- 
-.container .login-email .input-group .btn:hover {
-    transform: translateY(-5px);
-    background: #6c5ce7;
-}
- 
+
 .login-register-text {
     color: #111;
     font-weight: 600;
@@ -89,7 +83,7 @@ body {
  
 .login-register-text a {
     text-decoration: none;
-    color: #6c5ce7;
+    color: #E09145;
 }
  
 .container-logout {
@@ -107,7 +101,7 @@ body {
     padding: 15px 20px;
     text-align: center;
     border: none;
-    background: #a29bfe;
+    background: #E09145;
     outline: none;
     border-radius: 30px;
     font-size: 1.2rem;
@@ -118,8 +112,7 @@ body {
 }
  
 .container-logout .login-email .input-group .btn:hover {
-    transform: translateY(-5px);
-    background: #6c5ce7;
+    background: #E09145;
 }
  
 @media (max-width: 430px) {
