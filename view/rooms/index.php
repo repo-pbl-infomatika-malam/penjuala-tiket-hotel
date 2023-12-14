@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
 
@@ -25,15 +26,19 @@
           <tr>
             <th>ID ROOMS</th>
             <th>ROOMS NUMBER</th>
+            <th>CAPACITY</th>
             <th>DESCRIPTION</th>
             <th>IMAGE</th>
             <th>TYPE ROOMS</th>
             <th>PRICE</th>
             <th>ACTION</th>
           </tr>
+
+    
           <tr>
-            <td>1</td>
+            <td>123</td>
             <td>1.1</td>
+            <td>2 persons</td>
             <td>Free wifi</td>
             <td>1</td>
             <td>minimalis</td>
@@ -44,6 +49,7 @@
               <a href="#" class="btn btn-danger">Delete</a>
             </td>
           </tr>
+          
         </table>
 
         <!-- Awal Modal -->
@@ -65,7 +71,12 @@
 
                   <div class="mb-3">
                     <label class="form-label">ROOMS NUMBER</label>
-                    <input type="text" class="form-control" name="tnumber" placeholder="Masukan number rooms">
+                    <input type="text" class="form-control" name="tnumber" placeholder="Input Room Number">
+                  </div>
+
+                  <div class="mb-3">
+                    <label class="form-label">CAPACITY</label>
+                    <input type="text" class="form-control" name="tcapacity" placeholder="Input Capacity Room">
                   </div>
 
                   <div class="mb-3">
@@ -85,13 +96,18 @@
                       <option value="Standart Room">Standart Room</option>
                       <option value="Superior Room">Superior Room</option>
                       <option value="Family Room">Family Room</option>
+                    </select>
                   </div>
 
+                  <div class="mb-3">
+                    <label class="form-label">PRICE</label>
+                    <input type="text" class="form-control" name="tprice" placeholder="Input Price">
+                  </div>
 
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
-                  <button type="button" class="btn btn-primary">Save</button>
+                  <button type="submit" class="btn btn-primary" name="bsubmit">Submit</button>
                 </div>
               </form>
 
@@ -99,7 +115,7 @@
           </div>
         </div>
 
-        <!-- Awal Modal -->
+        <!-- akhir Modal -->
 
       </div>
     </div>
