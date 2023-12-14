@@ -8,7 +8,7 @@
 body {
     width: 100%;
     min-height: 100vh;
-    
+    background-image: linear-gradient( 102.4deg, #E09145  7.8%,  #a57243 100.3% );
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
