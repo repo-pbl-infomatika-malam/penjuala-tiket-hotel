@@ -48,10 +48,12 @@ $dataHotels = getData($conn, "SELECT * FROM rooms");
 
         <div class="divider"></div>
 
-        <a href="../login/">
-          <button class="button-primary">Sign In</button>
+        <a href="../login-buyer/">
+          <button class="button-primary">Masuk</button>
         </a>
-        <a class="button-secondary">Sign Up</a>
+        <a href="../register/">
+          <button class="button-secondary">Daftar</button>
+        </a>
       </div>
     </div>
   </nav>
@@ -62,7 +64,7 @@ $dataHotels = getData($conn, "SELECT * FROM rooms");
       src="../../assets/images/landing-page/banner-hotel.jpg"
       alt="">
     <div class="title-banner">
-      <h1>WELCOME</h1>
+      <h1>SELEMAT DATANG</h1>
       <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa, quas.</p>
     </div>
 
@@ -70,10 +72,10 @@ $dataHotels = getData($conn, "SELECT * FROM rooms");
     <div class="box-detail">
       <div>
         <p class="title-count">
-          Book Your
+          Booking Kamar
         </p>
         <p class="result-count">
-          Room
+          Kamu
         </p>
       </div>
       <div class="d-flex flex-column text-center">
@@ -94,7 +96,7 @@ $dataHotels = getData($conn, "SELECT * FROM rooms");
       </div>
       <div class="d-flex flex-column text-center">
         <p class="title-count">
-          GUESTS
+          TAMU
         </p>
         <p class="result-count">
           5
@@ -112,17 +114,19 @@ $dataHotels = getData($conn, "SELECT * FROM rooms");
     </div>
     <div class="left-content">
       <div>
-        <p class="head-title-about-us">GET TO KNOW</p>
-        <p class="title-about-us">About Us</p>
+        <p class="head-title-about-us">Kamu Harus Tau</p>
+        <p class="title-about-us">Tentang Kami</p>
       </div>
-      <p class="desc-about-us">Welcome, a harmonious blend of opulence and warmth, where each stay is a unique story
-        waiting to unfold. Nestled in the heart of Batam, our hotel embodies the epitome of luxury and personalized
-        service</p>
+      <p class="desc-about-us">&emsp;Selamat datang, perpaduan harmonis antara kemewahan dan kehangatan, di mana setiap
+        masa
+        menginap adalah kisah unik
+        menunggu untuk terungkap. Terletak di jantung kota Batam, hotel kami mewujudkan lambang kemewahan dan personal
+        melayani</p>
 
-      <p class="desc-about-us">&emsp;Indulge in the embrace of meticulously designed rooms and suites, each a haven of
-        comfort
-        adorned with modern amenities and stylish decor. Whether you're here for business or leisure, our commitment to
-        excellence ensures a seamless and memorable experience.</p>
+      <p class="desc-about-us">&emsp;Manjakan diri dalam pelukan kamar dan suite yang dirancang dengan cermat,
+        masing-masing merupakan surga kenyamanan yang dihiasi dengan fasilitas modern dan dekorasi penuh gaya. Baik Anda
+        berada di sini untuk bisnis atau liburan, komitmen kami terhadap keunggulan memastikan pengalaman yang lancar
+        dan berkesan.</p>
 
       <button class="button-secondary">Contact-Us</button>
     </div>
@@ -130,8 +134,8 @@ $dataHotels = getData($conn, "SELECT * FROM rooms");
 
   <div class="container-lg out-rooms-container">
     <div class="headline">
-      <p class="content-headline">AVAILABLE ACCOMMODATIONS</p>
-      <h1 class="headline-title">OUR ROOMS</h1>
+      <p class="content-headline">KAMAR YANG TERSEDIA</p>
+      <h1 class="headline-title">KAMAR KAMI</h1>
     </div>
 
     <div class="d-flex flex-wrap justify-content-center gap-lg-5 mt-lg-4"
@@ -161,7 +165,7 @@ $dataHotels = getData($conn, "SELECT * FROM rooms");
   <div style="background-color: #9e9e9e1c;">
     <div class="container-lg services-container">
       <div class="headline">
-        <p class="content-headline">WILL GIVE YOU GOOD QUALITY</p>
+        <p class="content-headline">KAMU AKAN MENDAPATKAN QUALITAS YANG BAIK</p>
         <h1 class="headline-title">SERVICES</h1>
       </div>
 
@@ -184,10 +188,11 @@ $dataHotels = getData($conn, "SELECT * FROM rooms");
     <div class="left-content">
       <div class="d-flex  flex-column gap-2 text-center">
         <p class="title-tag-line">Seamless Luxury</p>
-        <h1 class="title-tag-line">Unforgettable Stay Elevate Your Experience</h1>
+        <h1 class="title-tag-line">Pengalaman Menginap yang Tak Terlupakan Tingkatkan Pengalaman Anda</h1>
 
-        <p class="desc-tag-line">Embark on a Journey of Refined Tranquility: Unwind in Unmatched Sophistication and
-          Impeccable Comfort</p>
+        <p class="desc-tag-line">Memulai Perjalanan Ketenangan yang Halus: Bersantai dalam Kecanggihan yang Tak
+          Tertandingi dan
+          Kenyamanan Sempurna</p>
       </div>
     </div>
 
@@ -200,16 +205,17 @@ $dataHotels = getData($conn, "SELECT * FROM rooms");
   <div class="container-lg about-us-container">
     <div class="left-content">
       <div>
-        <p class="title-about-us">Advantage</p>
-        <p class="head-title-about-us">WHAT YOU GET</p>
+        <p class="title-about-us">Keuntungan</p>
+        <p class="head-title-about-us">APA YANG KAMU DAPAT</p>
       </div>
-      <p class="desc-about-us">&emsp;Strategically nestled in the heart of Batam, our hotel provides easy access to key
-        attractions, business districts, and cultural landmarks, ensuring that you are at the center of it all.</p>
+      <p class="desc-about-us">&emsp;Berlokasi strategis di jantung kota Batam, hotel kami menyediakan akses mudah ke
+        tempat-tempat wisata utama, kawasan bisnis, dan landmark budaya, memastikan bahwa Anda berada di pusat semuanya.
+      </p>
 
-      <p class="desc-about-us">&emsp;Indulge in the embrace of meticulously designed rooms and suites, each a haven of
-        comfort
-        adorned with modern amenities and stylish decor. Whether you're here for business or leisure, our commitment to
-        excellence ensures a seamless and memorable experience.</p>
+      <p class="desc-about-us">&emsp;Manjakan diri dalam pelukan kamar dan suite yang dirancang dengan cermat,
+        masing-masing merupakan surga kenyamanan yang dihiasi dengan fasilitas modern dan dekorasi penuh gaya. Baik Anda
+        berada di sini untuk bisnis atau liburan, komitmen kami terhadap keunggulan memastikan pengalaman yang lancar
+        dan berkesan.</p>
 
     </div>
     <div class="right-content">
@@ -219,7 +225,7 @@ $dataHotels = getData($conn, "SELECT * FROM rooms");
   </div>
 
   <!-- footer start -->
-  <footer class=" border-top">
+  <footer class="border-top footer">
     <div class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 container-lg">
       <p class="col-md-4 mb-0 text-body-secondary">&copy; 2023 PBL-IF-D-MALAM, Mhs</p>
     </div>
