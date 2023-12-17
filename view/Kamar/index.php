@@ -27,7 +27,7 @@
       <div class="d-flex align-items-center gap-2">
         <div>
         <a href="../landing-page/index.php#about-us"
-            class="text-button-primary">About Us</a>
+            class="text-button-primary">Tentang Kami</a>
         </div>
         <div class="divider"></div>
         <a class="button-secondary">Keluar</a>
@@ -50,7 +50,6 @@
   <div class="card-body">
     <h5 class="card-title">3 Kamar Standar</h5>
     <h5 class="card-title">8 Kamar Istimewa</h5>
-    <h5 class="card-title">10 Kamar Keluarga</h5>
     
   </div>
   <a href="#" class="button-secondary ">Ubah</a>
@@ -64,7 +63,7 @@
   <div class="card-body">
   <h5 class="card-title">7 Kamar Standar</h5>
     <h5 class="card-title">2 Kamar Istimewa</h5>
-    <h5 class="card-title">6 Kamar Keluarga</h5>
+  
     </div>
   <a href="#" class="button-secondary ">Ubah</a>
   
@@ -77,7 +76,7 @@
   <div class="card-body">
   <h5 class="card-title">10 Kamar Standar</h5>
     <h5 class="card-title">10 Kamar Istimewa</h5>
-    <h5 class="card-title">10 Kamar Keluarga</h5>
+
   </div>
   <a href="#" class="button-secondary ">Ubah</a>
  
@@ -111,7 +110,7 @@
             <td>1.1</td>
             <td>Free wifi</td>
             <td>1</td>
-            <td>minimalis</td>
+            <td>Standar</td>
             <td>350.000</td>
 
             <td>
@@ -171,8 +170,8 @@
 
                 </div>
                 <div class="modal-footer">
-                  <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
-                  <button type="submit" class="btn btn-primary" name="bsubmit">Submit</button>
+                  <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Tutup</button>
+                  <button type="submit" class="btn btn-primary" name="bsubmit">Kirim</button>
                 </div>
               </form>
 
