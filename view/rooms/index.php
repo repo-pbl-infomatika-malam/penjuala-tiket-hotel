@@ -26,51 +26,97 @@
 
       <div class="d-flex align-items-center gap-2">
         <div>
-          <a href="../catalog-product-page/"
-            class="text-button-primary">Create Ticket</a>
+        <a href="../landing-page/index.php#about-us"
+            class="text-button-primary">About Us</a>
         </div>
-
         <div class="divider"></div>
-
-        
+        <a class="button-secondary">Keluar</a>
       </div>
     </div>
   </nav>
+  
   <!-- navbar end -->
+<br>
+<br>
+  <p class="fs-1 container">Dashboard Admin <bold></bold></p>
+  <BR>
+  <br>
+  <br>
+        <div class="container ">
+  <div class="row row-cols-5 row-cols-lg-5 g-2 g-lg-3">
+    <div class="col">
+    <div class="card text-white bg-secondary mb-4" style="max-width: 18rem;">
+  <div class="card-header">KAMAR TERSEDIA</div>
+  <div class="card-body">
+    <h5 class="card-title">3 Kamar Standar</h5>
+    <h5 class="card-title">8 Kamar Istimewa</h5>
+    <h5 class="card-title">10 Kamar Keluarga</h5>
+    
+  </div>
+  <a href="#" class="button-secondary ">Ubah</a>
+  
+</div>
+    </div>
 
+    <div class="col">
+    <div class="card text-white bg-secondary mb-3" style="max-width: 18rem;">
+  <div class="card-header">KAMAR TIDAK TERSEDIA</div>
+  <div class="card-body">
+  <h5 class="card-title">7 Kamar Standar</h5>
+    <h5 class="card-title">2 Kamar Istimewa</h5>
+    <h5 class="card-title">6 Kamar Keluarga</h5>
+    </div>
+  <a href="#" class="button-secondary ">Ubah</a>
+  
+</div>
+    </div>
 
-        <!-- Button trigger modal -->
-        <div class="mt-5">
-        <button type="button" class="btn btn-success mb-3 " data-bs-toggle="modal" data-bs-target="#modaltambah">
-          ADD PRODUCT
+<div class="col">
+    <div class="card text-white bg-secondary mb-3" style="max-width: 18rem;">
+  <div class="card-header">JUMLAH KAMAR</div>
+  <div class="card-body">
+  <h5 class="card-title">10 Kamar Standar</h5>
+    <h5 class="card-title">10 Kamar Istimewa</h5>
+    <h5 class="card-title">10 Kamar Keluarga</h5>
+  </div>
+  <a href="#" class="button-secondary ">Ubah</a>
+ 
+</div>
+</div>
+  </div>
+<br>
+<br>
+ <!-- Button trigger modal -->
+       <div> 
+        <button type="button" class="button-secondary mb-3 " data-bs-toggle="modal" data-bs-target="#modaltambah">
+          TAMBAH PRODUK
         </button>
         </div>
 
-        <table class="table table-bordered table-striped table-hover">
+
+        <table class="table table-bordered table-striped table-hover container">
           <tr>
-            <th>ID ROOMS</th>
-            <th>ROOMS NUMBER</th>
-            <th>CAPACITY</th>
-            <th>DESCRIPTION</th>
-            <th>IMAGE</th>
-            <th>TYPE ROOMS</th>
-            <th>PRICE</th>
-            <th>ACTION</th>
+            <th>ID KAMAR</th>
+            <th>NOMOR KAMAR</th>
+            <th>DESKRIPSI</th>
+            <th>FOTO</th>
+            <th>TIPE KAMAR</th>
+            <th>HARGA</th>
+            <th>AKSI</th>
           </tr>
 
     
           <tr>
             <td>123</td>
             <td>1.1</td>
-            <td>2 persons</td>
             <td>Free wifi</td>
             <td>1</td>
             <td>minimalis</td>
             <td>350.000</td>
 
             <td>
-              <a href="#" class="btn btn-warning">Update</a>
-              <a href="#" class="btn btn-danger">Delete</a>
+              <a href="#" class="btn btn-success">Ubah</a>
+              <a href="#" class="btn btn-danger">Hapus</a>
             </td>
           </tr>
           
@@ -89,43 +135,38 @@
                 <div class="modal-body overflow-auto">
 
                   <div class="mb-3">
-                    <label class="form-label">ID ROOMS</label>
-                    <input type="text" class="form-control" name="tid" placeholder="Input Id Room">
+                    <label class="form-label">ID KAMAR</label>
+                    <input type="text" class="form-control" name="tid" placeholder="Masukan id Kamar">
                   </div>
 
                   <div class="mb-3">
-                    <label class="form-label">ROOMS NUMBER</label>
-                    <input type="text" class="form-control" name="tnumber" placeholder="Input Room Number">
+                    <label class="form-label">NOMOR KAMAR</label>
+                    <input type="text" class="form-control" name="tnumber" placeholder="Masukan Nomor Kamar">
                   </div>
 
                   <div class="mb-3">
-                    <label class="form-label">CAPACITY</label>
-                    <input type="text" class="form-control" name="tcapacity" placeholder="Input Capacity Room">
-                  </div>
-
-                  <div class="mb-3">
-                    <label class="form-label">DESCRIPTION</label>
+                    <label class="form-label">DESKRIPSI</label>
                     <textarea class="form-control" name="tdescription" rows="3"></textarea>
                   </div>
 
                   <div class="mb-3">
-                    <label class="form-label">IMAGE</label>
+                    <label class="form-label">FOTO</label>
                     <input type="file" class="form-control" name="fimage" placeholder="choose image">
                   </div>
 
                   <div class="mb-3">
-                    <label class="form-label">TYPE ROOMS</label>
+                    <label class="form-label">TIPE KAMAR</label>
                     <select class="form-select" name="ttype">
                       <option></option>
-                      <option value="Standart Room">Standart Room</option>
-                      <option value="Superior Room">Superior Room</option>
-                      <option value="Family Room">Family Room</option>
+                      <option value="Standart Room">Kamar Standar</option>
+                      <option value="Superior Room">Kamar Istimewa </option>
+                      <option value="Family Room">Kamar Keluarga</option>
                     </select>
                   </div>
 
                   <div class="mb-3">
-                    <label class="form-label">PRICE</label>
-                    <input type="text" class="form-control" name="tprice" placeholder="Input Price">
+                    <label class="form-label">Harga</label>
+                    <input type="text" class="form-control" name="tprice" placeholder="Masukan Harga">
                   </div>
 
                 </div>
