@@ -61,20 +61,20 @@
             class="card-img-top"
             alt="Room 1">
           <div class="card-body">
-            <h5 class="card-title">Room 1</h5>
+            <h5 class="card-title">Kamar 1</h5>
             <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum excepturi, sint officia
               omnis quis at odit esse eaque non quo est tempora saepe dolorum provident placeat labore fuga nisi a.</p>
             <ul class="list-group list-group-flush">
               <li class="list-group-item">ID: 001</li>
-              <li class="list-group-item">Room Number: 101</li>
-              <li class="list-group-item">Type: Standard</li>
-              <li class="list-group-item">Price: $100/night</li>
+              <li class="list-group-item">Nomor Kamar: 101</li>
+              <li class="list-group-item">Tipe: Standar</li>
+              <li class="list-group-item">Harga: Rp 500.000/Malam</li>
             </ul>
             <div class="mt-3 d-flex justify-content-between">
               <button type="button"
-                class="btn button-secondary">See Details</button>
+                class="btn button-secondary">Lihat Rincian</button>
               <button type="button"
-                class="btn button-primary me-2">Book now</button>
+                class="btn button-primary me-2">Pesan Sekarang</button>
             </div>
           </div>
         </div>
@@ -87,20 +87,20 @@
             class="card-img-top"
             alt="Room 2">
           <div class="card-body">
-            <h5 class="card-title">Room 2</h5>
+            <h5 class="card-title">Kamar 2</h5>
             <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum excepturi, sint officia
               omnis quis at odit esse eaque non quo est tempora saepe dolorum provident placeat labore fuga nisi a.</p>
             <ul class="list-group list-group-flush">
               <li class="list-group-item">ID: 002</li>
-              <li class="list-group-item">Room Number: 102</li>
-              <li class="list-group-item">Type: Deluxe</li>
-              <li class="list-group-item">Price: $150/night</li>
+              <li class="list-group-item">Nomor Kamar: 102</li>
+              <li class="list-group-item">Tipe: Mewah</li>
+              <li class="list-group-item">Harga: Rp 1.500.000/Malam</li>
             </ul>
             <div class="mt-3 d-flex justify-content-between">
               <button type="button"
-                class="btn button-secondary">See Details</button>
+                class="btn button-secondary">Lihat Rincian</button>
               <button type="button"
-                class="btn button-primary me-2">Book now</button>
+                class="btn button-primary me-2">Pesan Sekarang</button>
             </div>
           </div>
         </div>
@@ -113,20 +113,20 @@
             class="card-img-top"
             alt="Room 3">
           <div class="card-body">
-            <h5 class="card-title">Room 3</h5>
+            <h5 class="card-title">Kamar 3</h5>
             <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum excepturi, sint officia
               omnis quis at odit esse eaque non quo est tempora saepe dolorum provident placeat labore fuga nisi a.</p>
             <ul class="list-group list-group-flush">
               <li class="list-group-item">ID: 003</li>
-              <li class="list-group-item">Room Number: 103</li>
-              <li class="list-group-item">Type: Standard</li>
-              <li class="list-group-item">Price: $100/night</li>
+              <li class="list-group-item">Nomor Kamar: 103</li>
+              <li class="list-group-item">Tipe: Standar</li>
+              <li class="list-group-item">Harga: Rp 500.000/Malam</li>
             </ul>
             <div class="mt-3 d-flex justify-content-between">
               <button type="button"
-                class="btn button-secondary">See Details</button>
+                class="btn button-secondary">Lihat Rincian</button>
               <button type="button"
-                class="btn button-primary me-2">Book now</button>
+                class="btn button-primary me-2">Pesan Sekarang</button>
             </div>
           </div>
         </div>
@@ -139,20 +139,20 @@
             class="card-img-top"
             alt="Room 4">
           <div class="card-body">
-            <h5 class="card-title">Room 4</h5>
+            <h5 class="card-title">Kamar 4</h5>
             <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum excepturi, sint officia
               omnis quis at odit esse eaque non quo est tempora saepe dolorum provident placeat labore fuga nisi a.</p>
             <ul class="list-group list-group-flush">
               <li class="list-group-item">ID: 004</li>
-              <li class="list-group-item">Room Number: 104</li>
-              <li class="list-group-item">Type: Deluxe</li>
-              <li class="list-group-item">Price: $150/night</li>
+              <li class="list-group-item">Nomor Kamar: 104</li>
+              <li class="list-group-item">Tipe: Mewah</li>
+              <li class="list-group-item">Harga: Rp 1.500.000/Malam</li>
             </ul>
             <div class="mt-3 d-flex justify-content-between">
               <button type="button"
-                class="btn button-secondary">See Details</button>
+                class="btn button-secondary">Lihat Rincian</button>
               <button type="button"
-                class="btn button-primary me-2">Book now</button>
+                class="btn button-primary me-2">Pesan Sekarang</button>
             </div>
           </div>
         </div>
@@ -165,20 +165,20 @@
             class="card-img-top"
             alt="Room 5">
           <div class="card-body">
-            <h5 class="card-title">Room 5</h5>
+            <h5 class="card-title">Kamar 5</h5>
             <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum excepturi, sint officia
               omnis quis at odit esse eaque non quo est tempora saepe dolorum provident placeat labore fuga nisi a.</p>
             <ul class="list-group list-group-flush">
               <li class="list-group-item">ID: 005</li>
-              <li class="list-group-item">Room Number: 105</li>
-              <li class="list-group-item">Type: Standard</li>
-              <li class="list-group-item">Price: $100/night</li>
+              <li class="list-group-item">Nomor Kamar: 105</li>
+              <li class="list-group-item">Tipe: Standar</li>
+              <li class="list-group-item">Harga: Rp 500.000/Malam</li>
             </ul>
             <div class="mt-3 d-flex justify-content-between">
               <button type="button"
-                class="btn button-secondary">See Details</button>
+                class="btn button-secondary">Lihat Rincian</button>
               <button type="button"
-                class="btn button-primary me-2">Book now</button>
+                class="btn button-primary me-2">Pesan Sekarang</button>
             </div>
           </div>
         </div>
@@ -191,20 +191,20 @@
             class="card-img-top"
             alt="Room 6">
           <div class="card-body">
-            <h5 class="card-title">Room 6</h5>
+            <h5 class="card-title">Kamar 6</h5>
             <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum excepturi, sint officia
               omnis quis at odit esse eaque non quo est tempora saepe dolorum provident placeat labore fuga nisi a.</p>
             <ul class="list-group list-group-flush">
               <li class="list-group-item">ID: 006</li>
-              <li class="list-group-item">Room Number: 106</li>
-              <li class="list-group-item">Type: Deluxe</li>
-              <li class="list-group-item">Price: $150/night</li>
+              <li class="list-group-item">Nomor Kamar: 106</li>
+              <li class="list-group-item">Tipe: Mewah</li>
+              <li class="list-group-item">Harga: Rp 1.500.000/Malam</li>
             </ul>
             <div class="mt-3 d-flex justify-content-between">
               <button type="button"
-                class="btn button-secondary">See Details</button>
+                class="btn button-secondary">Lihat Rincian</button>
               <button type="button"
-                class="btn button-primary me-2">Book now</button>
+                class="btn button-primary me-2">Pesan Sekarang</button>
             </div>
           </div>
         </div>
