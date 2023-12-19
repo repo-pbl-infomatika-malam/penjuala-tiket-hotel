@@ -1,0 +1,18 @@
+.container-navbar {
+  z-index: 1;
+  position: sticky;
+  top: 0;
+  background-color: white;
+  box-shadow: 0 0 4px 1px #e09145;
+}
+.display-4 {
+  font-weight: bold;
+}
+.card-body-icon {
+  position: absolute;
+  z-index: 0;
+  top: 25px;
+  right: 4px;
+  opacity: 0.4;
+  font-size: 90px;
+}

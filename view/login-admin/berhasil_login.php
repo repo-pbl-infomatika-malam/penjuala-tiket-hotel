@@ -21,7 +21,7 @@ if (!isset($_SESSION['username'])) {
 <body>
     <div class="container-logout">
         <form action="" method="POST" class="login-email">
-            <?php echo "<h1>Selamat Datang, " . $_SESSION['username'] ."!". "</h1>"; ?>
+            <?php echo "<h1>Welcome, " . $_SESSION['username'] ."!". "</h1>"; ?>
              
             <div class="input-group">
             <a href="logout.php" class="btn">Login</a>

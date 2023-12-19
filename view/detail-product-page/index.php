@@ -13,43 +13,32 @@
     href="../../assets/fontawesome/css/all.min.css">
   <link href="../../assets/css/bootstrap.min.css"
     rel="stylesheet">
-  <link href="styles.css"
+  <link href="_landing-page.css"
+    rel="stylesheet" />
+  <link href="../../styles/global.css"
     rel="stylesheet" />
 </head>
- 
-<style>
-
-    button.btn1 {
-        color : #000;
-        background: #E09145;
-        color: black;
-        padding: 8px 20px;
-        border: 5px #E09145;
-        border-radius: 10px;
-    }
-</style>
 
 <body>
+
+  <!-- navbar start -->
   <nav class="container-navbar">
     <div class="navbar-content container-lg">
-      <img src="../../assets/logo-pbl.png"
-        class="logo"
-        alt="" />
+      <a href="">
+        <img src="../../assets/logo-pbl.png"
+          class="logo"
+          alt="" />
+      </a>
 
-      <div class="d-flex align-items-center gap-3">
+      <div class="d-flex align-items-center gap-2">
+        <div>
+          <a href="#about-us"
+            class="text-button-primary">About Us</a>
+          <a href="../catalog-product-page/"
+            class="text-button-primary">Catalog</a>
+        </div>
 
-        <a href="#"
-          class="text-button-primary">About</a>
-        <a href="#"
-          class="text-button-primary">Catalog</a>
-        <a href="#"
-          class="text-button-primary">Contact Us</a>
-      </div>
-
-
-      <div class="d-flex align-items-center gap-3">
-
-        <!-- <div class="divider"></div> -->
+        <div class="divider"></div>
 
         <a href="../login/">
           <button class="button-primary">Sign In</button>
@@ -75,24 +64,22 @@
       </aside>
       <main class="col-lg-6">
         <div class="ps-lg-3">
-          <h4 class="title text-dark">
-            Nama Hotel
-          </h4>
-          <h5>Room Number</h5><br>
+        <p class="h5">ID ROOMS</p>
+        <p class="h6">ROOMS NUMBER</p>
 
           <div class="mb-3">
          <span style="color:#E09145"> Price</span>
             <span class="h5">Rp 1.500.000,00</span>
-            <span class="text-">/per night</span>
+            <span class="text-muted">/per night</span>
           </div>
 
+          <p class="h6">DESCRIPTION:</p>
           <p>
-            Modern look and quality demo item is a streetwear-inspired collection that continues to break away from the conventions of mainstream fashion. Made in Italy, these black and brown clothing low-top shirts for
-            men.
-          </p>
-
+          Lorem ipsum dolor sit amet. Et expedita illo ut minima doloremque ea reiciendis esse ea similique vitae. Est numquam corrupti est minus veniam 33 nihil rerum et totam distinctio At ipsa nemo ut laborum omnis sed placeat voluptatem! Est quod impedit aut necessitatibus incidunt et omnis corrupti qui quam optio ab asperiores sint! Quo iusto tempore et blanditiis quia aut dolor unde aut voluptatibus labore sit doloremque rerum?
+          </p><br>
+          
           <div class="row">
-            <dt class="col-3">Type: </dt>
+            <dt class="col-3">Type room:</dt>
             <dd class="col-9">Standard</dd>
 
             <dt class="col-3">Capacity:</dt>
@@ -126,9 +113,21 @@
               </div>
             </div>
           </div>
-          <button class="btn1">Buy Now</button>
+          <button class="button-secondary">Book Now</button>
+          </a>
         </div>
       </main>
     </div>
   </div>
 </section>
+
+ <!-- footer start -->
+ <footer class=" border-top">
+    <div class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 container-lg">
+      <p class="col-md-4 mb-0 text-body-secondary">&copy; 2023 PBL-IF-D-MALAM, Mhs</p>
+    </div>
+  </footer>
+  <!-- footer end -->
+
+</body>
+</html>
