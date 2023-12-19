@@ -46,12 +46,12 @@
 
   <!-- Banner Section -->
   <div class="banner">
-    <h1>Welcome to Our Hotel Room Catalog</h1>
-    <p>Discover our luxurious rooms and book your stay today!</p>
+    <h1>Selamat datang di Katalog Kamar Hotel Kami</h1>
+    <p>Temukan kamar mewah kami dan pesan penginapan Anda hari ini!</p>
   </div>
 
   <div class="container mt-5">
-    <h1 class="mb-4">Hotel Room Catalog</h1>
+    <h1 class="mb-4">Katalog Kamar Hotel</h1>
     <div class="row row-cols-1 row-cols-md-3 g-4">
 
       <!-- Room 1 -->
