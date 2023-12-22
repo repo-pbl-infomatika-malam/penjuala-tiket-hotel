@@ -73,18 +73,10 @@ table thead tr {
 }
 table td {
   vertical-align: middle !important;
-  text-align: center;
-  padding-top: 50px;
-  padding-right: 30px;
-  padding-bottom: 50px;
-  padding-left: 80px;
 }
 table th,
 table td {
-  padding-top: 08px;
-  padding-bottom: 08px;
-  padding-right: 30px;
-  padding-left: 80px;
+  padding: 20px;
 }
 .table-bordered {
   box-shadow: 0px 0px 5px 0.5px gray;

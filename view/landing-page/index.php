@@ -7,19 +7,26 @@ require '../../config.php';
 require '../../controller/getData.php';
 $dataHotels = getData($conn, "SELECT * FROM rooms");
 
-echo $_SESSION['username'];
-echo $_SESSION['role'];
+// echo $_SESSION['username'];
+// echo $_SESSION['role'];
 ?>
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon" href="../../assets/favicon.ico">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon"
+    href="../../assets/favicon.ico">
   <title>Tiket AjA</title>
-  <link rel="stylesheet" type="text/css" href="../../assets/fontawesome/css/all.min.css">
-  <link href="../../assets/css/bootstrap.min.css" rel="stylesheet">
-  <link href="_landing-page.css" rel="stylesheet" />
-  <link href="../../styles/global.css" rel="stylesheet" />
+  <link rel="stylesheet"
+    type="text/css"
+    href="../../assets/fontawesome/css/all.min.css">
+  <link href="../../assets/css/bootstrap.min.css"
+    rel="stylesheet">
+  <link href="_landing-page.css"
+    rel="stylesheet" />
+  <link href="../../styles/global.css"
+    rel="stylesheet" />
 </head>
 
 <body>
@@ -28,13 +35,17 @@ echo $_SESSION['role'];
   <nav class="container-navbar">
     <div class="navbar-content container-lg">
       <a href="">
-        <img src="../../assets/logo-pbl.png" class="logo" alt="" />
+        <img src="../../assets/logo-pbl.png"
+          class="logo"
+          alt="" />
       </a>
 
       <div class="d-flex align-items-center gap-2">
         <div>
-          <a href="#about-us" class="text-button-primary">Tentang Kami</a>
-          <a href="../catalog-product-page/" class="text-button-primary">Catalog</a>
+          <a href="#about-us"
+            class="text-button-primary">Tentang Kami</a>
+          <a href="../catalog-product-page/"
+            class="text-button-primary">Catalog</a>
         </div>
 
         <div class="divider"></div>
@@ -51,7 +62,9 @@ echo $_SESSION['role'];
   <!-- navbar end -->
 
   <div class="banner-container">
-    <img class="banner-hotel" src="../../assets/images/landing-page/banner-hotel.jpg" alt="">
+    <img class="banner-hotel"
+      src="../../assets/images/landing-page/banner-hotel.jpg"
+      alt="">
     <div class="title-banner">
       <h1>SELEMAT DATANG</h1>
       <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa, quas.</p>
@@ -98,7 +111,8 @@ echo $_SESSION['role'];
 
   <div class="container-lg about-us-container">
     <div class="right-content">
-      <img src="../../assets/images/landing-page/banner-about-us.jpg" class="about-banner" />
+      <img src="../../assets/images/landing-page/banner-about-us.jpg"
+        class="about-banner" />
     </div>
     <div class="left-content">
       <div>
@@ -126,23 +140,26 @@ echo $_SESSION['role'];
       <h1 class="headline-title">KAMAR KAMI</h1>
     </div>
 
-    <div class="d-flex flex-wrap justify-content-center gap-lg-5 mt-lg-4" style="padding-top: 40px;">
+    <div class="d-flex flex-wrap justify-content-center gap-lg-5 mt-lg-4"
+      style="padding-top: 40px;">
 
       <?php $i = 1; ?>
       <?php foreach ($dataHotels as $dataHotel) : ?>
-        <div class="card-rooms">
-          <img src="../../assets/images/landing-page/banner-hotel.jpg" class="card-img-top" alt="...">
+      <div class="card-rooms">
+        <img src="../../assets/images/landing-page/banner-hotel.jpg"
+          class="card-img-top"
+          alt="...">
 
-          <div class="card-rooms-content">
-            <p class="number-rooms"><?php echo $dataHotel['room_number'] ?></p>
-            <p class="title-rooms"><?php echo $dataHotel['room_name'] ?></h>
-            <p class="desc-rooms"><?php echo $dataHotel['description'] ?>
-            </p>
-          </div>
-
-          <button class="button-primary">See Details</button>
+        <div class="card-rooms-content">
+          <p class="number-rooms"><?php echo $dataHotel['room_number'] ?></p>
+          <p class="title-rooms"><?php echo $dataHotel['room_name'] ?></h>
+          <p class="desc-rooms"><?php echo $dataHotel['description'] ?>
+          </p>
         </div>
-        <?php $i++; ?>
+
+        <button class="button-primary">See Details</button>
+      </div>
+      <?php $i++; ?>
       <?php endforeach; ?>
     </div>
   </div>
@@ -155,12 +172,15 @@ echo $_SESSION['role'];
       </div>
 
       <div class="d-flex justify-content-center gap-lg-5 mt-lg-4">
-        <div class="card" style="width: 16rem;aspect-ratio: 1;">
+        <div class="card"
+          style="width: 16rem;aspect-ratio: 1;">
 
         </div>
-        <div class="card" style="width: 16rem;aspect-ratio: 1;">
+        <div class="card"
+          style="width: 16rem;aspect-ratio: 1;">
         </div>
-        <div class="card" style="width: 16rem;aspect-ratio: 1;">
+        <div class="card"
+          style="width: 16rem;aspect-ratio: 1;">
         </div>
       </div>
     </div>
@@ -179,7 +199,8 @@ echo $_SESSION['role'];
     </div>
 
     <div class="right-content">
-      <img src="../../assets/images/landing-page/wallpaper-hotel.jpg" class="image-content-tag-line" />
+      <img src="../../assets/images/landing-page/wallpaper-hotel.jpg"
+        class="image-content-tag-line" />
     </div>
   </div>
 
@@ -200,7 +221,8 @@ echo $_SESSION['role'];
 
     </div>
     <div class="right-content">
-      <img src="../../assets/images/landing-page/advantage-hotel.jpg" class="advantage-banner" />
+      <img src="../../assets/images/landing-page/advantage-hotel.jpg"
+        class="advantage-banner" />
     </div>
   </div>
 
