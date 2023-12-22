@@ -1,0 +1,14 @@
+.container h1 {
+  font-size: 1.5em;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.button-secondary {
+  text-decoration: none;
+  color: #e09145;
+  border: solid #fff 1px;
+  border-radius: 8px;
+  background-color: white;
+  padding: 8px 10px;
+}
