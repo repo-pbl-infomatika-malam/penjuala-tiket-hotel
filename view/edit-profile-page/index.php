@@ -3,20 +3,13 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport"
-    content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon"
-    href="../../assets/favicon.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="../../assets/favicon.ico">
   <title>Tiket AjA</title>
-  <link rel="stylesheet"
-    type="text/css"
-    href="../../assets/fontawesome/css/all.min.css">
-  <link href="../../assets/css/bootstrap.min.css"
-    rel="stylesheet">
-  <link href="_landing-page.css"
-    rel="stylesheet" />
-  <link href="../../styles/global.css"
-    rel="stylesheet" />
+  <link rel="stylesheet" type="text/css" href="../../assets/fontawesome/css/all.min.css">
+  <link href="../../assets/css/bootstrap.min.css" rel="stylesheet">
+  <link href="_landing-page.css" rel="stylesheet" />
+  <link href="../../styles/global.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -24,17 +17,13 @@
   <nav class="container-navbar">
     <div class="navbar-content container-lg">
       <a href="../landing-page/">
-        <img src="../../assets/logo-pbl.png"
-          class="logo"
-          alt="" />
+        <img src="../../assets/logo-pbl.png" class="logo" alt="" />
       </a>
 
       <div class="d-flex align-items-center gap-2">
         <div>
-          <a href="../landing-page/#about-us"
-            class="text-button-primary">Tentang Kami</a>
-          <a href="../catalog-product-page/"
-            class="text-button-primary">Catalog</a>
+          <a href="../landing-page/#about-us" class="text-button-primary">Tentang Kami</a>
+          <a href="../catalog-product-page/" class="text-button-primary">Catalog</a>
         </div>
 
         <div class="divider"></div>
@@ -57,10 +46,7 @@
       <!-- left column -->
       <div class="col-md-3">
         <div class="text-center">
-          <img src="../../assets/images/avatar.png"
-            class="rounded-3"
-            style="width: 150px;"
-            alt="Avatar" />
+          <img src="../../assets/images/avatar.png" class="rounded-3" style="width: 150px;" alt="Avatar" />
         </div>
       </div>
 
@@ -73,23 +59,18 @@
         <center><span class="h5">Data Diri</span></center>
         <br>
 
-        <form class="form-horizontal"
-          role="form">
+        <form class="form-horizontal" role="form">
           <div class="form-group">
             <label class="col-lg-3 control-label">Nama Pengguna:</label>
             <div class="col-lg-8">
-              <input class="form-control"
-                type="text"
-                placeholder="Masukkan nama pengguna">
+              <input class="form-control" type="text" placeholder="Masukkan nama pengguna">
             </div>
             <br>
 
             <div class="form-group">
               <label class="col-lg-3 control-label">Email:</label>
               <div class="col-lg-8">
-                <input class="form-control"
-                  type="text"
-                  placeholder="Masukkan alamat email">
+                <input class="form-control" type="text" placeholder="Masukkan alamat email">
               </div>
             </div>
             <br>
@@ -97,9 +78,7 @@
             <div class="form-group">
               <label class="col-lg-3 control-label">No.Handphone:</label>
               <div class="col-lg-8">
-                <input class="form-control"
-                  type="text"
-                  placeholder="Masukkan no.handphone">
+                <input class="form-control" type="text" placeholder="Masukkan no.handphone">
               </div>
             </div>
 
