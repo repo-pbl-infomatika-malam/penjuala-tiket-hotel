@@ -5,10 +5,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" href="../../assets/favicon.ico">
-  <title>Tiket AjA</title>
+  <title>Invoice</title>
   <link rel="stylesheet" type="text/css" href="../../assets/fontawesome/css/all.min.css">
   <link href="../../assets/css/bootstrap.min.css" rel="stylesheet">
-  <link href="_landing-page.css" rel="stylesheet" />
+  <link href="detail-invoice.css" rel="stylesheet" />
   <link href="../../styles/global.css" rel="stylesheet" />
 </head>
 
@@ -36,15 +36,16 @@
       </div>
     </div>
   </nav>
+  <!-- navbar end -->
 
   <div class="container">
     <div class="brand-section">
       <div class="row">
         <div class="col-6">
+          <h6 class="heading">INVOICE</h6>
         </div>
         <div class="col-6">
           <div class="company-details">
-            <h3><strong>INVOICE</strong></h3><br>
             <p class="text-white">Batam Centre, Jl. Ahmad Yani, Tlk. Tering, Kec. Batam Kota</p>
             <p class="text-white">Kota Batam, Kepulauan Riau 29461</p>
             <p class="text-white">+62 81234567890</p>
@@ -56,7 +57,6 @@
     <div class="body-section">
       <div class="row">
         <div class="col-6">
-          <h2 class="heading">Invoice</h2>
           <p class="sub-heading">Kode Invoice: 001</p>
           <p class="sub-heading">Tanggal Pemesanan: 16-09-2023 21:05:15</p>
           <p class="sub-heading">Email: minipbltim2@gmail.com</p>
@@ -77,7 +77,7 @@
             <th>Title</th>
             <th class="w-20">Harga</th>
             <th class="w-20">Kapasitas</th>
-            <th class="w-20">Total Keseluruhan</th>
+            <th class="w-20">Sub Total</th>
           </tr>
         </thead>
         <tbody>
@@ -97,12 +97,12 @@
           </tr>
           <tr>
             <td colspan="3" class="text-right">Total</td>
-            <td>Rp. 1.320.000</td>
+            <td>Rp. 1.680.000</td>
           </tr>
         </tbody>
       </table>
       <br>
-      <h3 class="heading">Status Pembayaran: Sukses</h3>
+      <h3 class="sub-heading">Status Pembayaran: Sukses</h3>
     </div>
   </div>
 
