@@ -27,18 +27,20 @@
 
       <div class="d-flex align-items-center gap-2">
         <div>
-          <a href="../landing-page/index.php#about-us"
-            class="text-button-primary">About Us</a>
+          <a href="../landing-page/#about-us"
+            class="text-button-primary">Tentang Kami</a>
           <a href="../catalog-product-page/"
             class="text-button-primary">Catalog</a>
         </div>
 
         <div class="divider"></div>
 
-        <a href="../login/">
-          <button class="button-primary">Sign In</button>
+        <a href="../login-buyer/">
+          <button class="button-primary">Masuk</button>
         </a>
-        <a class="button-secondary">Sign Up</a>
+        <a href="../register/">
+          <button class="button-secondary">Daftar</button>
+        </a>
       </div>
     </div>
   </nav>
@@ -225,4 +227,5 @@
 
   <script src="../../assets/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
