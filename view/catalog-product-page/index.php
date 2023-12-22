@@ -3,15 +3,11 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport"
-    content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Hotel Room Catalog</title>
-  <link href="../../assets/css/bootstrap.min.css"
-    rel="stylesheet">
-  <link rel="stylesheet"
-    href="style.css">
-  <link rel="stylesheet"
-    href="../../styles/global.css">
+  <link href="../../assets/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="../../styles/global.css">
 </head>
 
 <body>
@@ -20,25 +16,23 @@
   <nav class="container-navbar">
     <div class="navbar-content container-lg">
       <a href="../landing-page/">
-        <img src="../../assets/logo-pbl.png"
-          class="logo"
-          alt="" />
+        <img src="../../assets/logo-pbl.png" class="logo" alt="" />
       </a>
 
       <div class="d-flex align-items-center gap-2">
         <div>
-          <a href="../landing-page/index.php#about-us"
-            class="text-button-primary">About Us</a>
-          <a href="../catalog-product-page/"
-            class="text-button-primary">Catalog</a>
+          <a href="../landing-page/index.php#about-us" class="text-button-primary">About Us</a>
+          <a href="../catalog-product-page/" class="text-button-primary">Catalog</a>
         </div>
 
         <div class="divider"></div>
 
-        <a href="../login/">
-          <button class="button-primary">Sign In</button>
+        <a href="../login-buyer/">
+          <button class="button-primary">Masuk</button>
         </a>
-        <a class="button-secondary">Sign Up</a>
+        <a href="../register/">
+          <button class="button-secondary">Daftar</button>
+        </a>
       </div>
     </div>
   </nav>
@@ -57,9 +51,7 @@
       <!-- Room 1 -->
       <div class="col">
         <div class="card h-100">
-          <img src="../../assets/images/catalog-product/room1.jpg"
-            class="card-img-top"
-            alt="Room 1">
+          <img src="../../assets/images/catalog-product/room1.jpg" class="card-img-top" alt="Room 1">
           <div class="card-body">
             <h5 class="card-title">Kamar 1</h5>
             <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum excepturi, sint officia
@@ -71,10 +63,8 @@
               <li class="list-group-item">Harga: Rp 500.000/Malam</li>
             </ul>
             <div class="mt-3 d-flex justify-content-between">
-              <button type="button"
-                class="btn button-secondary">Lihat Rincian</button>
-              <button type="button"
-                class="btn button-primary me-2">Pesan Sekarang</button>
+              <button type="button" class="btn button-secondary">Lihat Rincian</button>
+              <button type="button" class="btn button-primary me-2">Pesan Sekarang</button>
             </div>
           </div>
         </div>
@@ -83,9 +73,7 @@
       <!-- Room 2 -->
       <div class="col">
         <div class="card h-100">
-          <img src="../../assets/images/catalog-product/room2.jpg"
-            class="card-img-top"
-            alt="Room 2">
+          <img src="../../assets/images/catalog-product/room2.jpg" class="card-img-top" alt="Room 2">
           <div class="card-body">
             <h5 class="card-title">Kamar 2</h5>
             <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum excepturi, sint officia
@@ -97,10 +85,8 @@
               <li class="list-group-item">Harga: Rp 1.500.000/Malam</li>
             </ul>
             <div class="mt-3 d-flex justify-content-between">
-              <button type="button"
-                class="btn button-secondary">Lihat Rincian</button>
-              <button type="button"
-                class="btn button-primary me-2">Pesan Sekarang</button>
+              <button type="button" class="btn button-secondary">Lihat Rincian</button>
+              <button type="button" class="btn button-primary me-2">Pesan Sekarang</button>
             </div>
           </div>
         </div>
@@ -109,9 +95,7 @@
       <!-- Room 3 -->
       <div class="col">
         <div class="card h-100">
-          <img src="../../assets/images/catalog-product/room3.jpg"
-            class="card-img-top"
-            alt="Room 3">
+          <img src="../../assets/images/catalog-product/room3.jpg" class="card-img-top" alt="Room 3">
           <div class="card-body">
             <h5 class="card-title">Kamar 3</h5>
             <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum excepturi, sint officia
@@ -123,10 +107,8 @@
               <li class="list-group-item">Harga: Rp 500.000/Malam</li>
             </ul>
             <div class="mt-3 d-flex justify-content-between">
-              <button type="button"
-                class="btn button-secondary">Lihat Rincian</button>
-              <button type="button"
-                class="btn button-primary me-2">Pesan Sekarang</button>
+              <button type="button" class="btn button-secondary">Lihat Rincian</button>
+              <button type="button" class="btn button-primary me-2">Pesan Sekarang</button>
             </div>
           </div>
         </div>
@@ -135,9 +117,7 @@
       <!-- Room 4 -->
       <div class="col">
         <div class="card h-100">
-          <img src="../../assets/images/catalog-product/room4.png"
-            class="card-img-top"
-            alt="Room 4">
+          <img src="../../assets/images/catalog-product/room4.png" class="card-img-top" alt="Room 4">
           <div class="card-body">
             <h5 class="card-title">Kamar 4</h5>
             <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum excepturi, sint officia
@@ -149,10 +129,8 @@
               <li class="list-group-item">Harga: Rp 1.500.000/Malam</li>
             </ul>
             <div class="mt-3 d-flex justify-content-between">
-              <button type="button"
-                class="btn button-secondary">Lihat Rincian</button>
-              <button type="button"
-                class="btn button-primary me-2">Pesan Sekarang</button>
+              <button type="button" class="btn button-secondary">Lihat Rincian</button>
+              <button type="button" class="btn button-primary me-2">Pesan Sekarang</button>
             </div>
           </div>
         </div>
@@ -161,9 +139,7 @@
       <!-- Room 5 -->
       <div class="col">
         <div class="card h-100">
-          <img src="../../assets/images/catalog-product/room5.jpeg"
-            class="card-img-top"
-            alt="Room 5">
+          <img src="../../assets/images/catalog-product/room5.jpeg" class="card-img-top" alt="Room 5">
           <div class="card-body">
             <h5 class="card-title">Kamar 5</h5>
             <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum excepturi, sint officia
@@ -175,10 +151,8 @@
               <li class="list-group-item">Harga: Rp 500.000/Malam</li>
             </ul>
             <div class="mt-3 d-flex justify-content-between">
-              <button type="button"
-                class="btn button-secondary">Lihat Rincian</button>
-              <button type="button"
-                class="btn button-primary me-2">Pesan Sekarang</button>
+              <button type="button" class="btn button-secondary">Lihat Rincian</button>
+              <button type="button" class="btn button-primary me-2">Pesan Sekarang</button>
             </div>
           </div>
         </div>
@@ -187,9 +161,7 @@
       <!-- Room 6 -->
       <div class="col">
         <div class="card h-100">
-          <img src="../../assets/images/catalog-product/room6.jpg"
-            class="card-img-top"
-            alt="Room 6">
+          <img src="../../assets/images/catalog-product/room6.jpg" class="card-img-top" alt="Room 6">
           <div class="card-body">
             <h5 class="card-title">Kamar 6</h5>
             <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum excepturi, sint officia
@@ -201,10 +173,8 @@
               <li class="list-group-item">Harga: Rp 1.500.000/Malam</li>
             </ul>
             <div class="mt-3 d-flex justify-content-between">
-              <button type="button"
-                class="btn button-secondary">Lihat Rincian</button>
-              <button type="button"
-                class="btn button-primary me-2">Pesan Sekarang</button>
+              <button type="button" class="btn button-secondary">Lihat Rincian</button>
+              <button type="button" class="btn button-primary me-2">Pesan Sekarang</button>
             </div>
           </div>
         </div>
@@ -225,4 +195,5 @@
 
   <script src="../../assets/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>

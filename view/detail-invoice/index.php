@@ -3,13 +3,20 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon" href="../../assets/favicon.ico">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon"
+    href="../../assets/favicon.ico">
   <title>Invoice</title>
-  <link rel="stylesheet" type="text/css" href="../../assets/fontawesome/css/all.min.css">
-  <link href="../../assets/css/bootstrap.min.css" rel="stylesheet">
-  <link href="detail-invoice.css" rel="stylesheet" />
-  <link href="../../styles/global.css" rel="stylesheet" />
+  <link rel="stylesheet"
+    type="text/css"
+    href="../../assets/fontawesome/css/all.min.css">
+  <link href="../../assets/css/bootstrap.min.css"
+    rel="stylesheet">
+  <link href="detail-invoice.css"
+    rel="stylesheet" />
+  <link href="../../styles/global.css"
+    rel="stylesheet" />
 </head>
 
 <body>
@@ -17,22 +24,28 @@
   <!-- navbar start -->
   <nav class="container-navbar">
     <div class="navbar-content container-lg">
-      <a href="">
-        <img src="../../assets/logo-pbl.png" class="logo" alt="" />
+      <a href="../landing-page/">
+        <img src="../../assets/logo-pbl.png"
+          class="logo"
+          alt="" />
       </a>
 
       <div class="d-flex align-items-center gap-2">
         <div>
-          <a href="#about-us" class="text-button-primary">About Us</a>
-          <a href="../catalog-product-page/" class="text-button-primary">Catalog</a>
+          <a href="../landing-page/#about-us"
+            class="text-button-primary">Tentang Kami</a>
+          <a href="../catalog-product-page/"
+            class="text-button-primary">Catalog</a>
         </div>
 
         <div class="divider"></div>
 
-        <a href="../login/">
-          <button class="button-primary">Sign In</button>
+        <a href="../login-buyer/">
+          <button class="button-primary">Masuk</button>
         </a>
-        <a class="button-secondary">Sign Up</a>
+        <a href="../register/">
+          <button class="button-secondary">Daftar</button>
+        </a>
       </div>
     </div>
   </nav>
@@ -82,21 +95,28 @@
         </thead>
         <tbody>
           <tr>
-            <td>Lorem ipsum dolor sit amet. Et expedita illo ut minima doloremque ea reiciendis esse ea similique vitae. Est numquam corrupti est minus veniam 33 nihil rerum et totam distinctio At ipsa nemo ut laborum omnis sed placeat voluptatem! Est quod impedit aut necessitatibus incidunt et omnis corrupti qui quam optio ab asperiores sint! Quo iusto tempore et blanditiis quia aut dolor unde aut voluptatibus labore sit doloremque rerum?</td>
+            <td>Lorem ipsum dolor sit amet. Et expedita illo ut minima doloremque ea reiciendis esse ea similique vitae.
+              Est numquam corrupti est minus veniam 33 nihil rerum et totam distinctio At ipsa nemo ut laborum omnis sed
+              placeat voluptatem! Est quod impedit aut necessitatibus incidunt et omnis corrupti qui quam optio ab
+              asperiores sint! Quo iusto tempore et blanditiis quia aut dolor unde aut voluptatibus labore sit
+              doloremque rerum?</td>
             <td>Rp. 1.500.000</td>
             <td>3-4 Orang</td>
             <td>Rp. 1.500.000</td>
           </tr>
           <tr>
-            <td colspan="3" class="text-right">Sub Total</td>
+            <td colspan="3"
+              class="text-right">Sub Total</td>
             <td>Rp. 1.500.000</td>
           </tr>
           <tr>
-            <td colspan="3" class="text-right">Pajak 12%</td>
+            <td colspan="3"
+              class="text-right">Pajak 12%</td>
             <td>Rp. 180.000</td>
           </tr>
           <tr>
-            <td colspan="3" class="text-right">Total</td>
+            <td colspan="3"
+              class="text-right">Total</td>
             <td>Rp. 1.680.000</td>
           </tr>
         </tbody>
