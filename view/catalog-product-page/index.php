@@ -21,7 +21,7 @@
 
       <div class="d-flex align-items-center gap-2">
         <div>
-          <a href="../landing-page/#about-us" class="text-button-primary">Tentang Kami</a>
+          <a href="../landing-page/index.php#about-us" class="text-button-primary">About Us</a>
           <a href="../catalog-product-page/" class="text-button-primary">Catalog</a>
         </div>
 
