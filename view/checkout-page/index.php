@@ -23,6 +23,13 @@
             background: blue;
             color: white;
    }
+
+   .dt {
+    color: green;
+   }
+   .dd {
+    color: green;
+   }
     </style> 
 
 </head>
@@ -41,17 +48,17 @@
       <div class="d-flex align-items-center gap-2">
         <div>
           <a href="#about-us"
-            class="text-button-primary">About Us</a>
+            class="text-button-primary">Tentang Kami</a>
           <a href="../catalog-product-page/"
-            class="text-button-primary">Catalog</a>
+            class="text-button-primary">Katalog</a>
         </div>
 
         <div class="divider"></div>
 
         <a href="../login/">
-          <button class="button-primary">Sign In</button>
+          <button class="button-primary">Masuk</button>
         </a>
-        <a class="button-secondary">Sign Up</a>
+        <a class="button-secondary">Daftar</a>
       </div>
     </div>
   </nav>
@@ -62,14 +69,14 @@
     <div class="row">
         <div class="col-md-4 order-md-2 mb-4">
             <h4 class="d-flex justify-content-between align-items-center mb-3">
-                <span class="text-muted">Your ticket order</span>
+                <span class="text-muted">Pesanan tiket anda</span>
                 <span class="badge badge-secondary badge-pill">3</span>
             </h4>
             <ul class="list-group mb-3 sticky-top">
                 <li class="list-group-item d-flex justify-content-between lh-condensed">
                     <div>
-                        <h6 class="my-0">Tiket Name</h6>
-                        <small class="text-muted">id ticket</small>
+                        <h6 class="my-0">Nama tiket</h6>
+                        <small class="text-muted">id tiket</small>
                     </div>
                     <span class="text-muted">Rp.</span>
                 </li>
@@ -82,46 +89,57 @@
             </ul>
                 <div class="input-group">
                 <div class="d-grid col mt-1 mx-auto">
-                    <button class="button-secondary">Book Now</button>
+                    <button class="button-secondary">Pesan Sekarang</button>
                     </div>
                 </div>
         </div>
         <div class="col-md-8 order-md-1">
-            <center><p class="mb-3 h4">Hotel Booking</p></center>
-            <br>
+            <center><p class="mb-3 h4">Pesanan Hotel</p></center>
 
-            <p class="h6">DESCRIPTION:</p>
-            <p>
-            Lorem ipsum dolor sit amet. Et expedita illo ut minima doloremque ea reiciendis esse ea similique vitae. Est numquam corrupti est minus veniam 33 nihil rerum et totam distinctio At ipsa nemo ut laborum omnis sed placeat voluptatem! Est quod impedit aut necessitatibus incidunt et omnis corrupti qui quam optio ab asperiores sint! Quo iusto tempore et blanditiis quia aut dolor unde aut voluptatibus labore sit doloremque rerum?
-            </p>
+            <div class="d-flex justify-content-center mb-3">
+        <img src="../../assets/images/catalog-product/room3.jpg" width="350px" height="200px"/>
+            </div>
+        
+            <div class="row">
+            <dt class="dt  col-3" >Tipe Kamar</dt>
+            <dd class="dd  col-9">: Standard</dd>
+
+            <dt class="dt  col-3">Kapasitas</dt>
+            <dd class="dd  col-9">: 2 Orang</dd>
+
+            <dt class="dt  col-3">Fasilitas</dt>
+            <dd class="dd  col-9">: Wi-Fi, Tempat tidur, Lampu tidur, Kamar mandi, Shower, Pendingin ruangan, Dilarang merokok, Lemari, dan Pembuat kopi</dd>
+            </div>
+            <br>
             <br>
             <form class="needs-validation" novalidate="">
                 <div class="row">
                     <div class="col-md-6 mb-3">
-                        <label for="firstName">First name</label>
+                        <label for="firstName">Nama depan:</label>
                         <input type="text" class="form-control" id="firstName" placeholder="" value="" required="">
-                        <div class="invalid-feedback"> Valid first name is required. </div>
+                        <div class="invalid-feedback"> Nama depan yang valid wajib diisi. </div>
                     </div>
                     <div class="col-md-6 mb-3">
-                        <label for="lastName">Last name</label>
+                        <label for="lastName">Nama belakang:</label>
                         <input type="text" class="form-control" id="lastName" placeholder="" value="" required="">
-                        <div class="invalid-feedback"> Valid last name is required. </div>
+                        <div class="invalid-feedback">Nama depan yang valid wajib diisi. </div>
                     </div>
                 </div>
                 <div class="mb-3">
 
-                    <p>Phone Number</p>
-                    <p>Phone Number</p>
+                    <label for="text">No. Handphone:</span></label>
+                    <input type="text" class="form-control" id="email" placeholder="+62">
+                    <div class="invalid-feedback">Silakan masukkan no. handphone yang aktif. </div>
 
                 </div>
                 <div class="mb-3">
-                    <label for="email">Email</span></label>
-                    <input type="email" class="form-control" id="email" placeholder="Email">
-                    <div class="invalid-feedback"> Please enter a valid email address for shipping updates. </div>
+                    <label for="email">Email:</span></label>
+                    <input type="email" class="form-control" id="email" placeholder="email@gmail.com">
+                    <div class="invalid-feedback">Silakan masukkan alamat email yang valid. </div>
                 </div>
 
                 <hr class="mb-4">
-                <h4 class="mb-3">Payment</h4>
+                <h4 class="mb-3">Pembayaran</h4>
                 <div class="footer_block_content">
                     <p>
                         <img src="https://www.rumahparfum.com/img/cms/Metode Pembayaran/pvisa.png" width="96" height="40">
