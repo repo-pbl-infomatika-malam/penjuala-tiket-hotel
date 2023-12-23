@@ -17,27 +17,28 @@
     rel="stylesheet" />
   <link href="../../styles/global.css"
     rel="stylesheet" />
-
-  <style>
-  #footer {
-    width: 100%;
-    background: blue;
-    color: white;
-  }
-
-  .dt {
-    color: green;
-  }
-
-  .dd {
-    color: green;
-  }
-  </style>
-
 </head>
 
-
 <body>
+
+  <?php
+  session_start();
+
+  if (!isset($_SESSION['role'])) {
+    header("location: ../login");
+  }
+
+  if ($_SESSION['phone'] === '' && $_SESSION['phone'] === '') {
+    header("location: ../edit-profile-page");
+  }
+
+  $id_room = $_GET["id_room"];
+
+  require '../../config.php';
+  require '../../controller/getData.php';
+  $dataHotel = getData($conn, "SELECT * FROM kamar  WHERE id_room = $id_room")[0];
+
+  ?>
 
   <!-- navbar start -->
   <nav class="container-navbar">
@@ -48,30 +49,40 @@
           alt="" />
       </a>
 
-      <div class="d-flex align-items-center gap-2">
+      <!-- <div class="d-flex align-items-center gap-2">
         <div>
-          <a href="../landing-page/#about-us"
-            class="text-button-primary">Tentang Kami</a>
-          <a href="../catalog-product-page/"
-            class="text-button-primary">Catalog</a>
+          <a href="../landing-page/#about-us" class="text-button-primary">Tentang Kami</a>
+          <a href="../catalog-product-page/" class="text-button-primary">Katalog</a>
         </div>
 
         <div class="divider"></div>
 
-        <a href="../login-buyer/">
-          <button class="button-primary">Masuk</button>
-        </a>
-        <a href="../register/">
-          <button class="button-secondary">Daftar</button>
-        </a>
-      </div>
+        <?php if (!isset($_SESSION['role'])) : ?>
+          <a href="../login/">
+            <button class="button-primary">Masuk</button>
+          </a>
+          <a href="../register/">
+            <button class="button-secondary">Daftar</button>
+          </a>
+        <?php else : ?>
+
+          <a href="../edit-profile-page/" class="button-primary">
+            <img src="../../assets/images/avatar.png" class="rounded-circle" style="width: 30px;" alt="Avatar" />
+          </a>
+          <a href="../../controller/logout.php">
+            <button class="button-primary">keluar</button>
+          </a>
+        <?php endif; ?>
+      </div> -->
     </div>
   </nav>
   <!-- navbar end -->
   <br>
   <br>
 
-  <div class="container">
+  <form method="post"
+    action="buatTransaksi.php"
+    class="container">
     <div class="row">
       <div class="col-md-4 order-md-2 mb-4">
         <h4 class="d-flex justify-content-between align-items-center mb-3">
@@ -79,23 +90,24 @@
           <span class="badge badge-secondary badge-pill">3</span>
         </h4>
         <ul class="list-group mb-3 sticky-top">
-          <li class="list-group-item d-flex justify-content-between lh-condensed">
-            <div>
-              <h6 class="my-0">Nama tiket</h6>
-              <small class="text-muted">id tiket</small>
-            </div>
-            <span class="text-muted">Rp.</span>
-          </li>
-          <li class="list-group-item d-flex justify-content-between lh-condensed">
-          </li>
           <li class="list-group-item d-flex justify-content-between">
             <span>Total</span>
-            <strong>Rp.</strong>
+            <strong><?= $dataHotel['price'] ?></strong>
           </li>
         </ul>
         <div class="input-group">
           <div class="d-grid col mt-1 mx-auto">
-            <button class="button-secondary">Pesan Sekarang</button>
+            <input type="hidden"
+              name="id_room"
+              value="<?= $dataHotel['id_room'] ?>">
+            <input type="hidden"
+              name="id_user"
+              value="<?= $_SESSION['id_user'] ?>">
+            <input type="hidden"
+              name="total_harga"
+              value="<?= $dataHotel['price'] ?>">
+            <button class="button-secondary"
+              type="submit">Pesan Sekarang</button>
           </div>
         </div>
       </div>
@@ -104,101 +116,47 @@
           <p class="mb-3 h4">Pesanan Hotel</p>
         </center>
 
-        <div class="d-flex justify-content-center mb-3">
-          <img src="../../assets/images/catalog-product/room3.jpg"
+        <div class="d-flex gap-3 mb-3">
+          <img src="../../assets/productImages/<?php echo $dataHotel['image'] ?>"
             width="350px"
             height="200px" />
+
+          <div class="row">
+            <dt class="dt  col-3">Nama Kamar</dt>
+            <dd class="dd  col-9">: <?= $dataHotel['room_name'] ?></dd>
+
+            <dt class="dt  col-3">Tipe Kamar</dt>
+            <dd class="dd  col-9">: <?= $dataHotel['type_room'] ?></dd>
+
+            <dt class="dt  col-3">Dekripsi</dt>
+            <dd class="dd  col-9">: <?= $dataHotel['description'] ?></dd>
+          </div>
         </div>
 
-        <div class="row">
-          <dt class="dt  col-3">Tipe Kamar</dt>
-          <dd class="dd  col-9">: Standard</dd>
-
-          <dt class="dt  col-3">Kapasitas</dt>
-          <dd class="dd  col-9">: 2 Orang</dd>
-
-          <dt class="dt  col-3">Fasilitas</dt>
-          <dd class="dd  col-9">: Wi-Fi, Tempat tidur, Lampu tidur, Kamar mandi, Shower, Pendingin ruangan, Dilarang
-            merokok, Lemari, dan Pembuat kopi</dd>
-        </div>
         <br>
         <br>
         <form class="needs-validation"
           novalidate="">
-          <div class="row">
-            <div class="col-md-6 mb-3">
-              <label for="firstName">Nama depan:</label>
-              <input type="text"
-                class="form-control"
-                id="firstName"
-                placeholder=""
-                value=""
-                required="">
-              <div class="invalid-feedback"> Nama depan yang valid wajib diisi. </div>
-            </div>
-            <div class="col-md-6 mb-3">
-              <label for="lastName">Nama belakang:</label>
-              <input type="text"
-                class="form-control"
-                id="lastName"
-                placeholder=""
-                value=""
-                required="">
-              <div class="invalid-feedback">Nama depan yang valid wajib diisi. </div>
-            </div>
-          </div>
           <div class="mb-3">
 
-            <label for="text">No. Handphone:</span></label>
-            <input type="text"
-              class="form-control"
-              id="email"
-              placeholder="+62">
-            <div class="invalid-feedback">Silakan masukkan no. handphone yang aktif. </div>
+            <label for="text">No. Handphone: <?php echo $_SESSION['phone'] ?></span></label>
 
           </div>
           <div class="mb-3">
-            <label for="email">Email:</span></label>
-            <input type="email"
-              class="form-control"
-              id="email"
-              placeholder="email@gmail.com">
-            <div class="invalid-feedback">Silakan masukkan alamat email yang valid. </div>
+            <label for="email">Email: <?php echo $_SESSION['address'] ?></span></label>
           </div>
-
-          <hr class="mb-4">
-          <h4 class="mb-3">Pembayaran</h4>
-          <div class="footer_block_content">
-            <p>
-              <img src="https://www.rumahparfum.com/img/cms/Metode Pembayaran/pvisa.png"
-                width="96"
-                height="40">
-              <img src="https://www.rumahparfum.com/img/cms/Metode Pembayaran/pmaster.png"
-                width="96"
-                height="40">
-              <img src="https://www.rumahparfum.com/img/cms/Metode Pembayaran/pbni.png"
-                width="96"
-                height="40">
-              <img src="../../assets/images/logo-payment/logo-dana.png"
-                alt=""
-                width="84"
-                height="35">
-            </p>
-            <hr class="mb-4">
-
         </form>
       </div>
     </div>
-  </div>
-  </div>
-
-  <!-- footer start -->
-  <footer class="border-top">
-    <div class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 container-lg">
-      <p class="col-md-4 mb-0 text-body-secondary">&copy; 2023 PBL-IF-D-MALAM, Mhs</p>
     </div>
-  </footer>
-  <!-- footer end -->
+
+    <!-- footer start -->
+    <footer class="border-top">
+      <div class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 container-lg">
+        <p class="col-md-4 mb-0 text-body-secondary">&copy; 2023 PBL-IF-D-MALAM, Mhs</p>
+      </div>
+    </footer>
+    <!-- footer end -->
 </body>
 
 </html>

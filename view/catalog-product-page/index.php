@@ -1,13 +1,26 @@
+<?php
+session_start();
+
+require '../../config.php';
+require '../../controller/getData.php';
+$dataHotels = getData($conn, "SELECT * FROM kamar");
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1">
   <title>Hotel Room Catalog</title>
-  <link href="../../assets/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="../../styles/global.css">
+  <link href="../../assets/css/bootstrap.min.css"
+    rel="stylesheet">
+  <link rel="stylesheet"
+    href="style.css">
+  <link rel="stylesheet"
+    href="../../styles/global.css">
 </head>
 
 <body>
@@ -16,23 +29,45 @@
   <nav class="container-navbar">
     <div class="navbar-content container-lg">
       <a href="../landing-page/">
-        <img src="../../assets/logo-pbl.png" class="logo" alt="" />
+        <img src="../../assets/logo-pbl.png"
+          class="logo"
+          alt="" />
       </a>
 
       <div class="d-flex align-items-center gap-2">
         <div>
-          <a href="../landing-page/index.php#about-us" class="text-button-primary">About Us</a>
-          <a href="../catalog-product-page/" class="text-button-primary">Catalog</a>
+          <a href="../landing-page/index.php#about-us"
+            class="text-button-primary">Tentang Kami</a>
+          <a href="../catalog-product-page/"
+            class="text-button-primary">Katalog</a>
+          <?php if (isset($_SESSION['role'])) : ?>
+          <a href="../daftar-transaksi/"
+            class="text-button-primary">Daftar Transaksi</a>
+          <?php endif; ?>
         </div>
-
         <div class="divider"></div>
 
-        <a href="../login-buyer/">
+        <?php if (!isset($_SESSION['role'])) : ?>
+        <a href="../login/">
           <button class="button-primary">Masuk</button>
         </a>
         <a href="../register/">
           <button class="button-secondary">Daftar</button>
         </a>
+        <?php else : ?>
+
+        <a href="../edit-profile-page/"
+          class="button-primary">
+          <img src="../../assets/images/avatar.png"
+            class="rounded-circle"
+            style="width: 30px;"
+            alt="Avatar" />
+        </a>
+        <a href="../../controller/logout.php">
+          <button class="button-primary">keluar</button>
+        </a>
+        <?php endif; ?>
+
       </div>
     </div>
   </nav>
@@ -48,140 +83,33 @@
     <h1 class="mb-4">Katalog Kamar Hotel</h1>
     <div class="row row-cols-1 row-cols-md-3 g-4">
 
-      <!-- Room 1 -->
+
+      <?php foreach ($dataHotels as $dataHotel) : ?>
+
       <div class="col">
         <div class="card h-100">
-          <img src="../../assets/images/catalog-product/room1.jpg" class="card-img-top" alt="Room 1">
+          <img class="card-img-top"
+            src="../../assets/productImages/<?php echo $dataHotel['image'] ?>"
+            width="240"
+            alt="iamge product">
           <div class="card-body">
-            <h5 class="card-title">Kamar 1</h5>
-            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum excepturi, sint officia
-              omnis quis at odit esse eaque non quo est tempora saepe dolorum provident placeat labore fuga nisi a.</p>
+            <h5 class="card-title"><?php echo $dataHotel['room_name'] ?></h5>
+            <p class="card-text"><?php echo $dataHotel['description'] ?></p>
             <ul class="list-group list-group-flush">
-              <li class="list-group-item">ID: 001</li>
-              <li class="list-group-item">Nomor Kamar: 101</li>
-              <li class="list-group-item">Tipe: Standar</li>
-              <li class="list-group-item">Harga: Rp 500.000/Malam</li>
+              <li class="list-group-item">Nomor Kamar: <?php echo $dataHotel['room_number'] ?></li>
+              <li class="list-group-item">Tipe: <?php echo $dataHotel['type_room'] ?></li>
+              <li class="list-group-item">Harga: <?php echo $dataHotel['price'] ?></li>
             </ul>
             <div class="mt-3 d-flex justify-content-between">
-              <button type="button" class="btn button-secondary">Lihat Rincian</button>
-              <button type="button" class="btn button-primary me-2">Pesan Sekarang</button>
+              <a class="btn button-secondary"
+                href="../detail-product-page/index.php?id_room=<?php echo $dataHotel['id_room']; ?>">Lihat Rincian</a>
+              <button type="button"
+                class="btn button-primary me-2">Pesan Sekarang</button>
             </div>
           </div>
         </div>
       </div>
-
-      <!-- Room 2 -->
-      <div class="col">
-        <div class="card h-100">
-          <img src="../../assets/images/catalog-product/room2.jpg" class="card-img-top" alt="Room 2">
-          <div class="card-body">
-            <h5 class="card-title">Kamar 2</h5>
-            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum excepturi, sint officia
-              omnis quis at odit esse eaque non quo est tempora saepe dolorum provident placeat labore fuga nisi a.</p>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item">ID: 002</li>
-              <li class="list-group-item">Nomor Kamar: 102</li>
-              <li class="list-group-item">Tipe: Mewah</li>
-              <li class="list-group-item">Harga: Rp 1.500.000/Malam</li>
-            </ul>
-            <div class="mt-3 d-flex justify-content-between">
-              <button type="button" class="btn button-secondary">Lihat Rincian</button>
-              <button type="button" class="btn button-primary me-2">Pesan Sekarang</button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Room 3 -->
-      <div class="col">
-        <div class="card h-100">
-          <img src="../../assets/images/catalog-product/room3.jpg" class="card-img-top" alt="Room 3">
-          <div class="card-body">
-            <h5 class="card-title">Kamar 3</h5>
-            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum excepturi, sint officia
-              omnis quis at odit esse eaque non quo est tempora saepe dolorum provident placeat labore fuga nisi a.</p>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item">ID: 003</li>
-              <li class="list-group-item">Nomor Kamar: 103</li>
-              <li class="list-group-item">Tipe: Standar</li>
-              <li class="list-group-item">Harga: Rp 500.000/Malam</li>
-            </ul>
-            <div class="mt-3 d-flex justify-content-between">
-              <button type="button" class="btn button-secondary">Lihat Rincian</button>
-              <button type="button" class="btn button-primary me-2">Pesan Sekarang</button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Room 4 -->
-      <div class="col">
-        <div class="card h-100">
-          <img src="../../assets/images/catalog-product/room4.png" class="card-img-top" alt="Room 4">
-          <div class="card-body">
-            <h5 class="card-title">Kamar 4</h5>
-            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum excepturi, sint officia
-              omnis quis at odit esse eaque non quo est tempora saepe dolorum provident placeat labore fuga nisi a.</p>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item">ID: 004</li>
-              <li class="list-group-item">Nomor Kamar: 104</li>
-              <li class="list-group-item">Tipe: Mewah</li>
-              <li class="list-group-item">Harga: Rp 1.500.000/Malam</li>
-            </ul>
-            <div class="mt-3 d-flex justify-content-between">
-              <button type="button" class="btn button-secondary">Lihat Rincian</button>
-              <button type="button" class="btn button-primary me-2">Pesan Sekarang</button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Room 5 -->
-      <div class="col">
-        <div class="card h-100">
-          <img src="../../assets/images/catalog-product/room5.jpeg" class="card-img-top" alt="Room 5">
-          <div class="card-body">
-            <h5 class="card-title">Kamar 5</h5>
-            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum excepturi, sint officia
-              omnis quis at odit esse eaque non quo est tempora saepe dolorum provident placeat labore fuga nisi a.</p>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item">ID: 005</li>
-              <li class="list-group-item">Nomor Kamar: 105</li>
-              <li class="list-group-item">Tipe: Standar</li>
-              <li class="list-group-item">Harga: Rp 500.000/Malam</li>
-            </ul>
-            <div class="mt-3 d-flex justify-content-between">
-              <button type="button" class="btn button-secondary">Lihat Rincian</button>
-              <button type="button" class="btn button-primary me-2">Pesan Sekarang</button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Room 6 -->
-      <div class="col">
-        <div class="card h-100">
-          <img src="../../assets/images/catalog-product/room6.jpg" class="card-img-top" alt="Room 6">
-          <div class="card-body">
-            <h5 class="card-title">Kamar 6</h5>
-            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum excepturi, sint officia
-              omnis quis at odit esse eaque non quo est tempora saepe dolorum provident placeat labore fuga nisi a.</p>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item">ID: 006</li>
-              <li class="list-group-item">Nomor Kamar: 106</li>
-              <li class="list-group-item">Tipe: Mewah</li>
-              <li class="list-group-item">Harga: Rp 1.500.000/Malam</li>
-            </ul>
-            <div class="mt-3 d-flex justify-content-between">
-              <button type="button" class="btn button-secondary">Lihat Rincian</button>
-              <button type="button" class="btn button-primary me-2">Pesan Sekarang</button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-
-
+      <?php endforeach; ?>
     </div>
   </div>
 

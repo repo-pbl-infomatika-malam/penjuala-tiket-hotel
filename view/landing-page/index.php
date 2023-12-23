@@ -5,10 +5,8 @@
 session_start();
 require '../../config.php';
 require '../../controller/getData.php';
-$dataHotels = getData($conn, "SELECT * FROM rooms");
+$dataHotels = getData($conn, "SELECT * FROM kamar");
 
-// echo $_SESSION['username'];
-// echo $_SESSION['role'];
 ?>
 
 <head>
@@ -45,17 +43,36 @@ $dataHotels = getData($conn, "SELECT * FROM rooms");
           <a href="#about-us"
             class="text-button-primary">Tentang Kami</a>
           <a href="../catalog-product-page/"
-            class="text-button-primary">Catalog</a>
+            class="text-button-primary">Katalog</a>
+
+          <?php if (isset($_SESSION['role'])) : ?>
+          <a href="../daftar-transaksi/"
+            class="text-button-primary">Daftar Transaksi</a>
+          <?php endif; ?>
         </div>
 
         <div class="divider"></div>
 
-        <a href="../login-buyer/">
+        <?php if (!isset($_SESSION['role'])) : ?>
+        <a href="../login/">
           <button class="button-primary">Masuk</button>
         </a>
         <a href="../register/">
           <button class="button-secondary">Daftar</button>
         </a>
+        <?php else : ?>
+
+        <a href="../edit-profile-page/"
+          class="button-primary">
+          <img src="../../assets/images/avatar.png"
+            class="rounded-circle"
+            style="width: 30px;"
+            alt="Avatar" />
+        </a>
+        <a href="../../controller/logout.php">
+          <button class="button-primary">keluar</button>
+        </a>
+        <?php endif; ?>
       </div>
     </div>
   </nav>
@@ -146,9 +163,10 @@ $dataHotels = getData($conn, "SELECT * FROM rooms");
       <?php $i = 1; ?>
       <?php foreach ($dataHotels as $dataHotel) : ?>
       <div class="card-rooms">
-        <img src="../../assets/images/landing-page/banner-hotel.jpg"
-          class="card-img-top"
-          alt="...">
+        <img src="../../assets/productImages/<?php echo $dataHotel['image'] ?>"
+          width="240"
+          alt="iamge product">
+
 
         <div class="card-rooms-content">
           <p class="number-rooms"><?php echo $dataHotel['room_number'] ?></p>
@@ -157,7 +175,8 @@ $dataHotels = getData($conn, "SELECT * FROM rooms");
           </p>
         </div>
 
-        <button class="button-primary">See Details</button>
+        <a class="button-primary"
+          href="../detail-product-page/index.php?id_room=<?php echo $dataHotel['id_room']; ?>">Lihat Rincian</a>
       </div>
       <?php $i++; ?>
       <?php endforeach; ?>

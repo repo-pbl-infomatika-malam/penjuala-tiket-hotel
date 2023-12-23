@@ -38,6 +38,18 @@
            required>
        </div>
        <div class="input-group">
+         <input type="text"
+           placeholder="address"
+           name="address"
+           required>
+       </div>
+       <div class="input-group">
+         <input type="text"
+           placeholder="Phone Number"
+           name="phone_number"
+           required>
+       </div>
+       <div class="input-group">
          <input type="password"
            placeholder="Password"
            name="password"
@@ -53,7 +65,7 @@
          <button name="submit"
            class="button-secondary w-100">Daftar</button>
        </div>
-       <p class="login-register-text">Apa kah kamu punya aku? <a href="../login-buyer">Masuk</a></p>
+       <p class="login-register-text">Apa kah kamu punya aku? <a href="../login">Masuk</a></p>
      </form>
    </div>
  </body>

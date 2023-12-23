@@ -1,3 +1,14 @@
+<?php
+session_start();
+
+$id_room = $_GET["id_room"];
+
+require '../../config.php';
+require '../../controller/getData.php';
+$dataHotel = getData($conn, "SELECT * FROM kamar  WHERE id_room = $id_room")[0];
+
+?>
+
 <!DOCTYPE html>
 <html lang="id">
 
@@ -14,12 +25,7 @@
     href="detail-invoice.css">
   <link href="../../styles/global.css"
     rel="stylesheet" />
-  <title>Invoice</title>
-
-</head>
-
-
-
+  <title>Detail Product</title>
 
 </head>
 
@@ -38,21 +44,40 @@
           <a href="../landing-page/#about-us"
             class="text-button-primary">Tentang Kami</a>
           <a href="../catalog-product-page/"
-            class="text-button-primary">Catalog</a>
+            class="text-button-primary">Katalog</a>
+
+          <?php if (isset($_SESSION['role'])) : ?>
+          <a href="../daftar-transaksi/"
+            class="text-button-primary">Daftar Transaksi</a>
+          <?php endif; ?>
         </div>
 
         <div class="divider"></div>
-
-        <a href="../login-buyer/">
+        <?php if (!isset($_SESSION['role'])) : ?>
+        <a href="../login/">
           <button class="button-primary">Masuk</button>
         </a>
         <a href="../register/">
           <button class="button-secondary">Daftar</button>
         </a>
+        <?php else : ?>
+
+        <a href="../edit-profile-page/"
+          class="button-primary">
+          <img src="../../assets/images/avatar.png"
+            class="rounded-circle"
+            style="width: 30px;"
+            alt="Avatar" />
+        </a>
+        <a href="../../controller/logout.php">
+          <button class="button-primary">keluar</button>
+        </a>
+        <?php endif; ?>
       </div>
     </div>
   </nav>
   <!-- navbar end -->
+
   <br>
 
   <!-- konten -->
@@ -63,81 +88,33 @@
           <div class="border rounded-4 mb-3 d-flex justify-content-center">
           </div>
           <div class="d-flex justify-content-center mb-3">
-            <img src="../../assets/images/catalog-product/room1.jpg" />
+            <img class="w-100"
+              src="../../assets/productImages/<?php echo $dataHotel['image'] ?>"
+              alt="iamge product">
             </a>
           </div>
-          <!-- thumbs-wrap.// -->
-          <!-- gallery-wrap .end// -->
         </aside>
-        <main class="col-lg-6">
+        <main class="col-lg-6 ">
           <div class="ps-lg-3">
-            <p class="h5">ID ROOMS</p>
-            <p class="h6">ROOMS NUMBER</p>
+            <p class="h6">ROOMS NUMBER : <?= $dataHotel['room_number'] ?></p>
 
             <div class="mb-3">
               <span style="color:#E09145"> Price</span>
-              <span class="h5">Rp 1.500.000,00</span>
-              <span class="text-muted">/per night</span>
+              <span class="h5"><?= $dataHotel['price'] ?></span>
             </div>
 
             <p class="h6">DESCRIPTION:</p>
-            <p>
-              Lorem ipsum dolor sit amet. Et expedita illo ut minima doloremque ea reiciendis esse ea similique vitae.
-              Est numquam corrupti est minus veniam 33 nihil rerum et totam distinctio At ipsa nemo ut laborum omnis sed
-              placeat voluptatem! Est quod impedit aut necessitatibus incidunt et omnis corrupti qui quam optio ab
-              asperiores sint! Quo iusto tempore et blanditiis quia aut dolor unde aut voluptatibus labore sit
-              doloremque rerum?
+            <p><?= $dataHotel['description'] ?>
             </p><br>
 
             <div class="row">
               <dt class="col-3">Type room:</dt>
-              <dd class="col-9">Standard</dd>
-
-              <dt class="col-3">Capacity:</dt>
-              <dd class="col-9">2 Persons</dd>
-
-              <dt class="col-3">Facility:</dt>
-              <dd class="col-9">Free Wi-Fi, Bed, Lamp, Bathroom, Shower, Air Conditioning, Non-smoking, Cupboard, and
-                Coffee Maker</dd>
+              <dd class="col-9"><?= $dataHotel["type_room"] ?></dd>
             </div>
 
             <hr />
-
-            <div class="row mb-4">
-              <div class="col-md-4 col-6">
-                <label class="mb-2">Type</label>
-                <select class="form-select border border-secondary"
-                  style="height: 35px;">
-                  <option>Standard</option>
-                  <option>Deluxe</option>
-                </select>
-              </div>
-              <!-- col.// -->
-              <div class="col-md-4 col-6 mb-3">
-                <label class="mb-2 d-block">Quantity</label>
-                <div class="input-group mb-3"
-                  style="width: 170px;">
-                  <button class="btn btn-white border border-secondary px-3"
-                    type="button"
-                    id="button-addon1"
-                    data-mdb-ripple-color="dark">
-                    <i class="fas fa-minus"></i>
-                  </button>
-                  <input type="text"
-                    class="form-control text-center border border-secondary"
-                    placeholder="14"
-                    aria-label="Example text with button addon"
-                    aria-describedby="button-addon1" />
-                  <button class="btn btn-white border border-secondary px-3"
-                    type="button"
-                    id="button-addon2"
-                    data-mdb-ripple-color="dark">
-                    <i class="fas fa-plus"></i>
-                  </button>
-                </div>
-              </div>
-            </div>
-            <button class="button-secondary">Book Now</button>
+            <a class="button-secondary"
+              href="../checkout-page/index.php?id_room=<?php echo $dataHotel['id_room']; ?>">Book</a>
             </a>
           </div>
         </main>
