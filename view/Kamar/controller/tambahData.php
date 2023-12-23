@@ -6,7 +6,7 @@ $nama_kamar = $_POST['nama_kamar'];
 $nomer_kamar = "6987" . $_POST['nomer_kamar'];
 $deskripsi_kamar = $_POST['deskripsi_kamar'];
 $type_kamar = $_POST['type_kamar'];
-$harga_kamar = $_POST['harga_kamar'];
+$harga_kamar = 'RP. ' . $_POST['harga_kamar'];
 
 $namaFiles      = $_FILES['image_hotel']['name'];
 $ukuranFiles    = $_FILES['image_hotel']['size'];
