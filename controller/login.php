@@ -12,6 +12,16 @@ $unHashPassword = password_verify($password, $row['password']);
 
 print_r($row);
 
+if ($row['role'] === 'seller') {
+  if (mysqli_num_rows($data) > 0) {
+
+    $_SESSION['username'] = $row['username'];
+    $_SESSION['role'] = $row['role'];
+
+    header("location: ../view/kamar");
+  }
+}
+
 if ($unHashPassword) {
   if (mysqli_num_rows($data) > 0) {
     $_SESSION['username'] = $row['username'];

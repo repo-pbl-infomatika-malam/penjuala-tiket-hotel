@@ -3,35 +3,28 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport"
-    content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon"
-    href="../../assets/favicon.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="../../assets/favicon.ico">
   <title>Checkout</title>
-  <link rel="stylesheet"
-    type="text/css"
-    href="../../assets/fontawesome/css/all.min.css">
-  <link href="../../assets/css/bootstrap.min.css"
-    rel="stylesheet">
-  <link href="_landing-page.css"
-    rel="stylesheet" />
-  <link href="../../styles/global.css"
-    rel="stylesheet" />
+  <link rel="stylesheet" type="text/css" href="../../assets/fontawesome/css/all.min.css">
+  <link href="../../assets/css/bootstrap.min.css" rel="stylesheet">
+  <link href="_landing-page.css" rel="stylesheet" />
+  <link href="../../styles/global.css" rel="stylesheet" />
 
   <style>
-  #footer {
-    width: 100%;
-    background: blue;
-    color: white;
-  }
+    #footer {
+      width: 100%;
+      background: blue;
+      color: white;
+    }
 
-  .dt {
-    color: green;
-  }
+    .dt {
+      color: green;
+    }
 
-  .dd {
-    color: green;
-  }
+    .dd {
+      color: green;
+    }
   </style>
 
 </head>
@@ -43,22 +36,18 @@
   <nav class="container-navbar">
     <div class="navbar-content container-lg">
       <a href="../landing-page/">
-        <img src="../../assets/logo-pbl.png"
-          class="logo"
-          alt="" />
+        <img src="../../assets/logo-pbl.png" class="logo" alt="" />
       </a>
 
       <div class="d-flex align-items-center gap-2">
         <div>
-          <a href="../landing-page/#about-us"
-            class="text-button-primary">Tentang Kami</a>
-          <a href="../catalog-product-page/"
-            class="text-button-primary">Catalog</a>
+          <a href="../landing-page/#about-us" class="text-button-primary">Tentang Kami</a>
+          <a href="../catalog-product-page/" class="text-button-primary">Catalog</a>
         </div>
 
         <div class="divider"></div>
 
-        <a href="../login-buyer/">
+        <a href="../login/">
           <button class="button-primary">Masuk</button>
         </a>
         <a href="../register/">
@@ -105,9 +94,7 @@
         </center>
 
         <div class="d-flex justify-content-center mb-3">
-          <img src="../../assets/images/catalog-product/room3.jpg"
-            width="350px"
-            height="200px" />
+          <img src="../../assets/images/catalog-product/room3.jpg" width="350px" height="200px" />
         </div>
 
         <div class="row">
@@ -123,46 +110,29 @@
         </div>
         <br>
         <br>
-        <form class="needs-validation"
-          novalidate="">
+        <form class="needs-validation" novalidate="">
           <div class="row">
             <div class="col-md-6 mb-3">
               <label for="firstName">Nama depan:</label>
-              <input type="text"
-                class="form-control"
-                id="firstName"
-                placeholder=""
-                value=""
-                required="">
+              <input type="text" class="form-control" id="firstName" placeholder="" value="" required="">
               <div class="invalid-feedback"> Nama depan yang valid wajib diisi. </div>
             </div>
             <div class="col-md-6 mb-3">
               <label for="lastName">Nama belakang:</label>
-              <input type="text"
-                class="form-control"
-                id="lastName"
-                placeholder=""
-                value=""
-                required="">
+              <input type="text" class="form-control" id="lastName" placeholder="" value="" required="">
               <div class="invalid-feedback">Nama depan yang valid wajib diisi. </div>
             </div>
           </div>
           <div class="mb-3">
 
             <label for="text">No. Handphone:</span></label>
-            <input type="text"
-              class="form-control"
-              id="email"
-              placeholder="+62">
+            <input type="text" class="form-control" id="email" placeholder="+62">
             <div class="invalid-feedback">Silakan masukkan no. handphone yang aktif. </div>
 
           </div>
           <div class="mb-3">
             <label for="email">Email:</span></label>
-            <input type="email"
-              class="form-control"
-              id="email"
-              placeholder="email@gmail.com">
+            <input type="email" class="form-control" id="email" placeholder="email@gmail.com">
             <div class="invalid-feedback">Silakan masukkan alamat email yang valid. </div>
           </div>
 
@@ -170,19 +140,10 @@
           <h4 class="mb-3">Pembayaran</h4>
           <div class="footer_block_content">
             <p>
-              <img src="https://www.rumahparfum.com/img/cms/Metode Pembayaran/pvisa.png"
-                width="96"
-                height="40">
-              <img src="https://www.rumahparfum.com/img/cms/Metode Pembayaran/pmaster.png"
-                width="96"
-                height="40">
-              <img src="https://www.rumahparfum.com/img/cms/Metode Pembayaran/pbni.png"
-                width="96"
-                height="40">
-              <img src="../../assets/images/logo-payment/logo-dana.png"
-                alt=""
-                width="84"
-                height="35">
+              <img src="https://www.rumahparfum.com/img/cms/Metode Pembayaran/pvisa.png" width="96" height="40">
+              <img src="https://www.rumahparfum.com/img/cms/Metode Pembayaran/pmaster.png" width="96" height="40">
+              <img src="https://www.rumahparfum.com/img/cms/Metode Pembayaran/pbni.png" width="96" height="40">
+              <img src="../../assets/images/logo-payment/logo-dana.png" alt="" width="84" height="35">
             </p>
             <hr class="mb-4">
 

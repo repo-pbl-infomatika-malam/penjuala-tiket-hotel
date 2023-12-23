@@ -27,7 +27,7 @@
 
         <div class="divider"></div>
 
-        <a href="../login-buyer/">
+        <a href="../login/">
           <button class="button-primary">Masuk</button>
         </a>
         <a href="../register/">

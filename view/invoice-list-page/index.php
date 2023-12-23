@@ -3,15 +3,11 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport"
-    content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Invoice List</title>
-  <link href="../../assets/css/bootstrap.min.css"
-    rel="stylesheet">
-  <link rel="stylesheet"
-    href="style.css">
-  <link rel="stylesheet"
-    href="../../styles/global.css">
+  <link href="../../assets/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="../../styles/global.css">
 </head>
 
 <body>
@@ -20,22 +16,18 @@
   <nav class="container-navbar">
     <div class="navbar-content container-lg">
       <a href="../landing-page/">
-        <img src="../../assets/logo-pbl.png"
-          class="logo"
-          alt="" />
+        <img src="../../assets/logo-pbl.png" class="logo" alt="" />
       </a>
 
       <div class="d-flex align-items-center gap-2">
         <div>
-          <a href="../landing-page/#about-us"
-            class="text-button-primary">Tentang Kami</a>
-          <a href="../catalog-product-page/"
-            class="text-button-primary">Catalog</a>
+          <a href="../landing-page/#about-us" class="text-button-primary">Tentang Kami</a>
+          <a href="../catalog-product-page/" class="text-button-primary">Catalog</a>
         </div>
 
         <div class="divider"></div>
 
-        <a href="../login-buyer/">
+        <a href="../login/">
           <button class="button-primary">Masuk</button>
         </a>
         <a href="../register/">
