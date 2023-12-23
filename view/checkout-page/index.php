@@ -25,7 +25,7 @@
   session_start();
 
   if (!isset($_SESSION['role'])) {
-    header("location: ../view/login");
+    header("location: ../login");
   }
 
   if ($_SESSION['phone'] === '' && $_SESSION['phone'] === '') {
@@ -49,37 +49,31 @@
           alt="" />
       </a>
 
-      <div class="d-flex align-items-center gap-2">
+      <!-- <div class="d-flex align-items-center gap-2">
         <div>
-          <a href="../landing-page/#about-us"
-            class="text-button-primary">Tentang Kami</a>
-          <a href="../catalog-product-page/"
-            class="text-button-primary">Katalog</a>
+          <a href="../landing-page/#about-us" class="text-button-primary">Tentang Kami</a>
+          <a href="../catalog-product-page/" class="text-button-primary">Katalog</a>
         </div>
 
         <div class="divider"></div>
 
         <?php if (!isset($_SESSION['role'])) : ?>
-        <a href="../login/">
-          <button class="button-primary">Masuk</button>
-        </a>
-        <a href="../register/">
-          <button class="button-secondary">Daftar</button>
-        </a>
+          <a href="../login/">
+            <button class="button-primary">Masuk</button>
+          </a>
+          <a href="../register/">
+            <button class="button-secondary">Daftar</button>
+          </a>
         <?php else : ?>
 
-        <a href="../edit-profile-page/"
-          class="button-primary">
-          <img src="../../assets/images/avatar.png"
-            class="rounded-circle"
-            style="width: 30px;"
-            alt="Avatar" />
-        </a>
-        <a href="../../controller/logout.php">
-          <button class="button-primary">keluar</button>
-        </a>
+          <a href="../edit-profile-page/" class="button-primary">
+            <img src="../../assets/images/avatar.png" class="rounded-circle" style="width: 30px;" alt="Avatar" />
+          </a>
+          <a href="../../controller/logout.php">
+            <button class="button-primary">keluar</button>
+          </a>
         <?php endif; ?>
-      </div>
+      </div> -->
     </div>
   </nav>
   <!-- navbar end -->

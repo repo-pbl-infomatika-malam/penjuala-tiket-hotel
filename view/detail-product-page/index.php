@@ -45,6 +45,11 @@ $dataHotel = getData($conn, "SELECT * FROM kamar  WHERE id_room = $id_room")[0];
             class="text-button-primary">Tentang Kami</a>
           <a href="../catalog-product-page/"
             class="text-button-primary">Katalog</a>
+
+          <?php if (isset($_SESSION['role'])) : ?>
+          <a href="../daftar-transaksi/"
+            class="text-button-primary">Daftar Transaksi</a>
+          <?php endif; ?>
         </div>
 
         <div class="divider"></div>
@@ -72,6 +77,7 @@ $dataHotel = getData($conn, "SELECT * FROM kamar  WHERE id_room = $id_room")[0];
     </div>
   </nav>
   <!-- navbar end -->
+
   <br>
 
   <!-- konten -->

@@ -12,6 +12,28 @@
   <link href="../../styles/global.css" rel="stylesheet" />
 </head>
 
+<?php
+session_start();
+require '../../config.php';
+require '../../controller/getData.php';
+
+$id_booking = $_GET['id_booking'];
+
+if (!isset($_SESSION['role'])) {
+  header("location: ../login");
+}
+
+$dataInvoice = getData($conn, "SELECT * FROM tranksaksi  WHERE id_booking = $id_booking")[0];
+
+$idUser = $dataInvoice['id_user'];
+$idRoom = $dataInvoice['id_room'];
+
+$user = getData($conn, "SELECT * FROM users  WHERE id_user = $idUser")[0];
+$kamar = getData($conn, "SELECT * FROM kamar  WHERE id_room = $idRoom")[0];
+
+?>
+
+
 <body>
 
   <!-- navbar start -->
@@ -24,17 +46,30 @@
       <div class="d-flex align-items-center gap-2">
         <div>
           <a href="../landing-page/#about-us" class="text-button-primary">Tentang Kami</a>
-          <a href="../catalog-product-page/" class="text-button-primary">Catalog</a>
+          <a href="../catalog-product-page/" class="text-button-primary">Katalog</a>
+
+          <?php if (isset($_SESSION['role'])) : ?>
+            <a href="../daftar-transaksi/" class="text-button-primary">Daftar Transaksi</a>
+          <?php endif; ?>
         </div>
 
         <div class="divider"></div>
+        <?php if (!isset($_SESSION['role'])) : ?>
+          <a href="../login/">
+            <button class="button-primary">Masuk</button>
+          </a>
+          <a href="../register/">
+            <button class="button-secondary">Daftar</button>
+          </a>
+        <?php else : ?>
 
-        <a href="../login/">
-          <button class="button-primary">Masuk</button>
-        </a>
-        <a href="../register/">
-          <button class="button-secondary">Daftar</button>
-        </a>
+          <a href="../edit-profile-page/" class="button-primary">
+            <img src="../../assets/images/avatar.png" class="rounded-circle" style="width: 30px;" alt="Avatar" />
+          </a>
+          <a href="../../controller/logout.php">
+            <button class="button-primary">keluar</button>
+          </a>
+        <?php endif; ?>
       </div>
     </div>
   </nav>
@@ -46,27 +81,20 @@
         <div class="col-6">
           <h6 class="heading">INVOICE</h6>
         </div>
-        <div class="col-6">
-          <div class="company-details">
-            <p class="text-white">Batam Centre, Jl. Ahmad Yani, Tlk. Tering, Kec. Batam Kota</p>
-            <p class="text-white">Kota Batam, Kepulauan Riau 29461</p>
-            <p class="text-white">+62 81234567890</p>
-          </div>
-        </div>
       </div>
     </div>
 
     <div class="body-section">
       <div class="row">
         <div class="col-6">
-          <p class="sub-heading">Kode Invoice: 001</p>
-          <p class="sub-heading">Tanggal Pemesanan: 16-09-2023 21:05:15</p>
-          <p class="sub-heading">Email: minipbltim2@gmail.com</p>
+          <p class="sub-heading">Kode Invoice: <?= $dataInvoice['nomer_invoice'] ?></p>
+          <p class="sub-heading">Tanggal Pemesanan: <?= $dataInvoice['tanggal_transaksi'] ?></p>
+          <p class="sub-heading">Email: <?= $user['email'] ?></p>
         </div>
         <div class="col-6">
-          <p class="sub-heading">Nama Lengkap: Patar Glen </p>
-          <p class="sub-heading">Alamat: Batam, Indonesia </p>
-          <p class="sub-heading">Nomor Telepon: 089876543210</p>
+          <p class="sub-heading">Nama Lengkap: <?= $user['username'] ?> </p>
+          <p class="sub-heading">Alamat: <?= $user['address'] ?></p>
+          <p class="sub-heading">Nomor Telepon: <?= $user['phone_number'] ?></p>
         </div>
       </div>
     </div>
@@ -77,38 +105,21 @@
         <thead>
           <tr>
             <th>Title</th>
-            <th class="w-20">Harga</th>
-            <th class="w-20">Kapasitas</th>
-            <th class="w-20">Sub Total</th>
+            <th class="w-40">Deskripsi</th>
+            <th style="width: 150px;">Harga Total</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td>Lorem ipsum dolor sit amet. Et expedita illo ut minima doloremque ea reiciendis esse ea similique vitae.
-              Est numquam corrupti est minus veniam 33 nihil rerum et totam distinctio At ipsa nemo ut laborum omnis sed
-              placeat voluptatem! Est quod impedit aut necessitatibus incidunt et omnis corrupti qui quam optio ab
-              asperiores sint! Quo iusto tempore et blanditiis quia aut dolor unde aut voluptatibus labore sit
-              doloremque rerum?</td>
-            <td>Rp. 1.500.000</td>
-            <td>3-4 Orang</td>
-            <td>Rp. 1.500.000</td>
+            <td><?= $kamar['room_name'] ?></td>
+            <td><?= $kamar['description'] ?></td>
+            <td><?= $dataInvoice['total_harga'] ?></td>
           </tr>
-          <tr>
-            <td colspan="3" class="text-right">Sub Total</td>
-            <td>Rp. 1.500.000</td>
-          </tr>
-          <tr>
-            <td colspan="3" class="text-right">Pajak 12%</td>
-            <td>Rp. 180.000</td>
-          </tr>
-          <tr>
-            <td colspan="3" class="text-right">Total</td>
-            <td>Rp. 1.680.000</td>
-          </tr>
+
         </tbody>
       </table>
       <br>
-      <h3 class="sub-heading">Status Pembayaran: Sukses</h3>
+      <h3 class="sub-heading">Status Pembayaran: <?= $dataInvoice['status'] ?></h3>
     </div>
   </div>
 

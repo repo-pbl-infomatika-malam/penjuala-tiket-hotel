@@ -11,13 +11,20 @@ $dataHotels = getData($conn, "SELECT * FROM kamar");
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon" href="../../assets/favicon.ico">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon"
+    href="../../assets/favicon.ico">
   <title>Tiket AjA</title>
-  <link rel="stylesheet" type="text/css" href="../../assets/fontawesome/css/all.min.css">
-  <link href="../../assets/css/bootstrap.min.css" rel="stylesheet">
-  <link href="_landing-page.css" rel="stylesheet" />
-  <link href="../../styles/global.css" rel="stylesheet" />
+  <link rel="stylesheet"
+    type="text/css"
+    href="../../assets/fontawesome/css/all.min.css">
+  <link href="../../assets/css/bootstrap.min.css"
+    rel="stylesheet">
+  <link href="_landing-page.css"
+    rel="stylesheet" />
+  <link href="../../styles/global.css"
+    rel="stylesheet" />
 </head>
 
 <body>
@@ -26,32 +33,45 @@ $dataHotels = getData($conn, "SELECT * FROM kamar");
   <nav class="container-navbar">
     <div class="navbar-content container-lg">
       <a href="">
-        <img src="../../assets/logo-pbl.png" class="logo" alt="" />
+        <img src="../../assets/logo-pbl.png"
+          class="logo"
+          alt="" />
       </a>
 
       <div class="d-flex align-items-center gap-2">
         <div>
-          <a href="#about-us" class="text-button-primary">Tentang Kami</a>
-          <a href="../catalog-product-page/" class="text-button-primary">Katalog</a>
+          <a href="#about-us"
+            class="text-button-primary">Tentang Kami</a>
+          <a href="../catalog-product-page/"
+            class="text-button-primary">Katalog</a>
+
+          <?php if (isset($_SESSION['role'])) : ?>
+          <a href="../daftar-transaksi/"
+            class="text-button-primary">Daftar Transaksi</a>
+          <?php endif; ?>
         </div>
 
         <div class="divider"></div>
 
         <?php if (!isset($_SESSION['role'])) : ?>
-          <a href="../login/">
-            <button class="button-primary">Masuk</button>
-          </a>
-          <a href="../register/">
-            <button class="button-secondary">Daftar</button>
-          </a>
+        <a href="../login/">
+          <button class="button-primary">Masuk</button>
+        </a>
+        <a href="../register/">
+          <button class="button-secondary">Daftar</button>
+        </a>
         <?php else : ?>
 
-          <a href="../edit-profile-page/" class="button-primary">
-            <img src="../../assets/images/avatar.png" class="rounded-circle" style="width: 30px;" alt="Avatar" />
-          </a>
-          <a href="../../controller/logout.php">
-            <button class="button-primary">keluar</button>
-          </a>
+        <a href="../edit-profile-page/"
+          class="button-primary">
+          <img src="../../assets/images/avatar.png"
+            class="rounded-circle"
+            style="width: 30px;"
+            alt="Avatar" />
+        </a>
+        <a href="../../controller/logout.php">
+          <button class="button-primary">keluar</button>
+        </a>
         <?php endif; ?>
       </div>
     </div>
@@ -59,7 +79,9 @@ $dataHotels = getData($conn, "SELECT * FROM kamar");
   <!-- navbar end -->
 
   <div class="banner-container">
-    <img class="banner-hotel" src="../../assets/images/landing-page/banner-hotel.jpg" alt="">
+    <img class="banner-hotel"
+      src="../../assets/images/landing-page/banner-hotel.jpg"
+      alt="">
     <div class="title-banner">
       <h1>SELEMAT DATANG</h1>
       <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa, quas.</p>
@@ -106,7 +128,8 @@ $dataHotels = getData($conn, "SELECT * FROM kamar");
 
   <div class="container-lg about-us-container">
     <div class="right-content">
-      <img src="../../assets/images/landing-page/banner-about-us.jpg" class="about-banner" />
+      <img src="../../assets/images/landing-page/banner-about-us.jpg"
+        class="about-banner" />
     </div>
     <div class="left-content">
       <div>
@@ -134,24 +157,28 @@ $dataHotels = getData($conn, "SELECT * FROM kamar");
       <h1 class="headline-title">KAMAR KAMI</h1>
     </div>
 
-    <div class="d-flex flex-wrap justify-content-center gap-lg-5 mt-lg-4" style="padding-top: 40px;">
+    <div class="d-flex flex-wrap justify-content-center gap-lg-5 mt-lg-4"
+      style="padding-top: 40px;">
 
       <?php $i = 1; ?>
       <?php foreach ($dataHotels as $dataHotel) : ?>
-        <div class="card-rooms">
-          <img src="../../assets/productImages/<?php echo $dataHotel['image'] ?>" width="240" alt="iamge product">
+      <div class="card-rooms">
+        <img src="../../assets/productImages/<?php echo $dataHotel['image'] ?>"
+          width="240"
+          alt="iamge product">
 
 
-          <div class="card-rooms-content">
-            <p class="number-rooms"><?php echo $dataHotel['room_number'] ?></p>
-            <p class="title-rooms"><?php echo $dataHotel['room_name'] ?></h>
-            <p class="desc-rooms"><?php echo $dataHotel['description'] ?>
-            </p>
-          </div>
-
-          <a class="button-primary" href="../detail-product-page/index.php?id_room=<?php echo $dataHotel['id_room']; ?>">Lihat Rincian</a>
+        <div class="card-rooms-content">
+          <p class="number-rooms"><?php echo $dataHotel['room_number'] ?></p>
+          <p class="title-rooms"><?php echo $dataHotel['room_name'] ?></h>
+          <p class="desc-rooms"><?php echo $dataHotel['description'] ?>
+          </p>
         </div>
-        <?php $i++; ?>
+
+        <a class="button-primary"
+          href="../detail-product-page/index.php?id_room=<?php echo $dataHotel['id_room']; ?>">Lihat Rincian</a>
+      </div>
+      <?php $i++; ?>
       <?php endforeach; ?>
     </div>
   </div>
@@ -164,12 +191,15 @@ $dataHotels = getData($conn, "SELECT * FROM kamar");
       </div>
 
       <div class="d-flex justify-content-center gap-lg-5 mt-lg-4">
-        <div class="card" style="width: 16rem;aspect-ratio: 1;">
+        <div class="card"
+          style="width: 16rem;aspect-ratio: 1;">
 
         </div>
-        <div class="card" style="width: 16rem;aspect-ratio: 1;">
+        <div class="card"
+          style="width: 16rem;aspect-ratio: 1;">
         </div>
-        <div class="card" style="width: 16rem;aspect-ratio: 1;">
+        <div class="card"
+          style="width: 16rem;aspect-ratio: 1;">
         </div>
       </div>
     </div>
@@ -188,7 +218,8 @@ $dataHotels = getData($conn, "SELECT * FROM kamar");
     </div>
 
     <div class="right-content">
-      <img src="../../assets/images/landing-page/wallpaper-hotel.jpg" class="image-content-tag-line" />
+      <img src="../../assets/images/landing-page/wallpaper-hotel.jpg"
+        class="image-content-tag-line" />
     </div>
   </div>
 
@@ -209,7 +240,8 @@ $dataHotels = getData($conn, "SELECT * FROM kamar");
 
     </div>
     <div class="right-content">
-      <img src="../../assets/images/landing-page/advantage-hotel.jpg" class="advantage-banner" />
+      <img src="../../assets/images/landing-page/advantage-hotel.jpg"
+        class="advantage-banner" />
     </div>
   </div>
 

@@ -40,6 +40,10 @@ $dataHotels = getData($conn, "SELECT * FROM kamar");
             class="text-button-primary">Tentang Kami</a>
           <a href="../catalog-product-page/"
             class="text-button-primary">Katalog</a>
+          <?php if (isset($_SESSION['role'])) : ?>
+          <a href="../daftar-transaksi/"
+            class="text-button-primary">Daftar Transaksi</a>
+          <?php endif; ?>
         </div>
         <div class="divider"></div>
 
@@ -97,7 +101,7 @@ $dataHotels = getData($conn, "SELECT * FROM kamar");
               <li class="list-group-item">Harga: <?php echo $dataHotel['price'] ?></li>
             </ul>
             <div class="mt-3 d-flex justify-content-between">
-              <a class="button-secondary"
+              <a class="btn button-secondary"
                 href="../detail-product-page/index.php?id_room=<?php echo $dataHotel['id_room']; ?>">Lihat Rincian</a>
               <button type="button"
                 class="btn button-primary me-2">Pesan Sekarang</button>

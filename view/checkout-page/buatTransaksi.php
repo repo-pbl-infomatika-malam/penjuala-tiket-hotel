@@ -14,7 +14,7 @@ $input = mysqli_query($conn, "INSERT INTO tranksaksi
       VALUES('','$id_room','$id_user','$dateTime','$total_harga','tunggu konfirmasi','$id_booking')") or die(mysqli_error($conn));
 
 if ($input) {
-  header("location: ../invoice-list-page/index.php");
+  header("location: ../daftar-transaksi/index.php");
 }
 
 
