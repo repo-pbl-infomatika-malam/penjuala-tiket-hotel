@@ -10,6 +10,6 @@ $harga_kamar = 'RP. ' . $_POST['harga_kamar'];
 $gambarLama = $_POST['gambarLama'];
 
 $result = mysqli_query($conn, "UPDATE kamar SET room_name='$nama_kamar', description='$deskripsi_kamar',
-room_number='$nomer_kamar', image='$gambarLama', price='$harga_kamar', type_room='$type_kamar', WHERE id_room='$id_room'");
+room_number='$nomer_kamar', image='$gambarLama', price='$harga_kamar', type_room='$type_kamar' WHERE id_room='$id_room'");
 
 header("location: ../../kamar/index.php");
