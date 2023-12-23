@@ -26,6 +26,9 @@ if ($unHashPassword) {
   if (mysqli_num_rows($data) > 0) {
     $_SESSION['username'] = $row['username'];
     $_SESSION['role'] = $row['role'];
+    $_SESSION['address'] = $row['address'];
+    $_SESSION['phone'] = $row['phone_number'];
+    $_SESSION['id_user'] = $row['id_user'];
 
     header("location: ../view/landing-page");
   }
