@@ -5,10 +5,8 @@
 session_start();
 require '../../config.php';
 require '../../controller/getData.php';
-$dataHotels = getData($conn, "SELECT * FROM rooms");
+$dataHotels = getData($conn, "SELECT * FROM kamar");
 
-// echo $_SESSION['username'];
-// echo $_SESSION['role'];
 ?>
 
 <head>
