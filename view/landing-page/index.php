@@ -151,6 +151,8 @@ $dataHotels = getData($conn, "SELECT * FROM kamar");
     </div>
   </div>
 
+
+  <div id="lihat_kamar"></div>
   <div class="container-lg out-rooms-container">
     <div class="headline">
       <p class="content-headline">KAMAR YANG TERSEDIA</p>
@@ -176,6 +178,7 @@ $dataHotels = getData($conn, "SELECT * FROM kamar");
         </div>
 
         <a class="button-primary"
+          id="lihat_rincian=<?php echo $i; ?>"
           href="../detail-product-page/index.php?id_room=<?php echo $dataHotel['id_room']; ?>">Lihat Rincian</a>
       </div>
       <?php $i++; ?>

@@ -3,20 +3,13 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport"
-    content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon"
-    href="../../assets/favicon.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="../../assets/favicon.ico">
   <title>Checkout</title>
-  <link rel="stylesheet"
-    type="text/css"
-    href="../../assets/fontawesome/css/all.min.css">
-  <link href="../../assets/css/bootstrap.min.css"
-    rel="stylesheet">
-  <link href="_landing-page.css"
-    rel="stylesheet" />
-  <link href="../../styles/global.css"
-    rel="stylesheet" />
+  <link rel="stylesheet" type="text/css" href="../../assets/fontawesome/css/all.min.css">
+  <link href="../../assets/css/bootstrap.min.css" rel="stylesheet">
+  <link href="_landing-page.css" rel="stylesheet" />
+  <link href="../../styles/global.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -44,9 +37,7 @@
   <nav class="container-navbar">
     <div class="navbar-content container-lg">
       <a href="../landing-page/">
-        <img src="../../assets/logo-pbl.png"
-          class="logo"
-          alt="" />
+        <img src="../../assets/logo-pbl.png" class="logo" alt="" />
       </a>
 
       <!-- <div class="d-flex align-items-center gap-2">
@@ -80,9 +71,7 @@
   <br>
   <br>
 
-  <form method="post"
-    action="buatTransaksi.php"
-    class="container">
+  <form method="post" action="buatTransaksi.php" class="container">
     <div class="row">
       <div class="col-md-4 order-md-2 mb-4">
         <h4 class="d-flex justify-content-between align-items-center mb-3">
@@ -97,17 +86,10 @@
         </ul>
         <div class="input-group">
           <div class="d-grid col mt-1 mx-auto">
-            <input type="hidden"
-              name="id_room"
-              value="<?= $dataHotel['id_room'] ?>">
-            <input type="hidden"
-              name="id_user"
-              value="<?= $_SESSION['id_user'] ?>">
-            <input type="hidden"
-              name="total_harga"
-              value="<?= $dataHotel['price'] ?>">
-            <button class="button-secondary"
-              type="submit">Pesan Sekarang</button>
+            <input type="hidden" name="id_room" value="<?= $dataHotel['id_room'] ?>">
+            <input type="hidden" name="id_user" value="<?= $_SESSION['id_user'] ?>">
+            <input type="hidden" name="total_harga" value="<?= $dataHotel['price'] ?>">
+            <button class="button-secondary" id="checkout_button" type="submit">Pesan Sekarang</button>
           </div>
         </div>
       </div>
@@ -117,9 +99,7 @@
         </center>
 
         <div class="d-flex gap-3 mb-3">
-          <img src="../../assets/productImages/<?php echo $dataHotel['image'] ?>"
-            width="350px"
-            height="200px" />
+          <img src="../../assets/productImages/<?php echo $dataHotel['image'] ?>" width="350px" height="200px" />
 
           <div class="row">
             <dt class="dt  col-3">Nama Kamar</dt>
@@ -135,8 +115,7 @@
 
         <br>
         <br>
-        <form class="needs-validation"
-          novalidate="">
+        <form class="needs-validation" novalidate="">
           <div class="mb-3">
 
             <label for="text">No. Handphone: <?php echo $_SESSION['phone'] ?></span></label>

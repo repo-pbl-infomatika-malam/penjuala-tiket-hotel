@@ -114,6 +114,7 @@ $dataHotel = getData($conn, "SELECT * FROM kamar  WHERE id_room = $id_room")[0];
 
             <hr />
             <a class="button-secondary"
+              id="book_button"
               href="../checkout-page/index.php?id_room=<?php echo $dataHotel['id_room']; ?>">Book</a>
             </a>
           </div>

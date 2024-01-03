@@ -35,4 +35,14 @@ if (in_array($ekstensiGambar, $ekstensiGambarValid)) {
       }
     }
   }
+} else {
+  $input = mysqli_query($conn, "INSERT INTO kamar
+      VALUES('','$nama_kamar','$deskripsi_kamar','$nomer_kamar','6586a2c3f1b7a.jpg','$harga_kamar','$type_kamar')") or die(mysqli_error($conn));
+
+  if ($input) {
+    header("location: ../../kamar/index.php");
+  } else {
+    echo "terjadi kesalah, tolong upload lagi ";
+    echo "<br/> <a href='../kamar'";
+  }
 }

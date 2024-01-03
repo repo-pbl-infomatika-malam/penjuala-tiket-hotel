@@ -25,19 +25,19 @@ time.sleep(2)
 
 current_url = driver.current_url
 
-if '/dashboard' in current_url:
-    status = "Successful"
-elif '/' in current_url:
-    status = "Login gagal"
-else:
-    status = "Failed (Unknown error)"
+# if '/dashboard' in current_url:
+#     status = "Successful"
+# elif '/' in current_url:
+#     status = "Login gagal"
+# else:
+#     status = "Failed (Unknown error)"
 
-current_datetime = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+# current_datetime = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
-with open('selenium/data-mahasiswa/hasil-testing.txt', 'a') as file:
-    if '<h1>Internal Server Error</h1>' in driver.page_source:
-        file.write(f" {current_datetime} - Fitur Login  - Status: Error - Internal Server Error\n")
-    else:
-        file.write(f" {current_datetime} - Fitur Login - Status: {status}\n")
+# with open('selenium/data-mahasiswa/hasil-testing.txt', 'a') as file:
+#     if '<h1>Internal Server Error</h1>' in driver.page_source:
+#         file.write(f" {current_datetime} - Fitur Login  - Status: Error - Internal Server Error\n")
+#     else:
+#         file.write(f" {current_datetime} - Fitur Login - Status: {status}\n")
 
 driver.quit()

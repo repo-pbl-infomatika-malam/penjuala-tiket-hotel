@@ -83,7 +83,7 @@
                 <form action="controller/updateStatus.php" method="post">
                   <input type="hidden" name="status" value="berhasil" />
                   <input type="hidden" name="id_transaksi" value="<?= $data['id_booking']; ?>" />
-                  <button class="btn btn-success">Konfirmasi</button>
+                  <button id="button_konfimasi" class="btn btn-success">Konfirmasi</button>
                 </form>
                 <form action="controller/updateStatus.php" method="post">
                   <input type="hidden" name="status" value="gagal" />
